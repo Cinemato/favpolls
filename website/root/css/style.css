@@ -36,7 +36,7 @@ nav > ul {
 
 ul > li {
     margin: 0 15px;
-    font-size: 17px;
+    font-size: 1.1rem;
 }
 
 ul > li > a {
@@ -47,19 +47,25 @@ ul > li > a {
 }
 
 ul > li > a:hover {
-    text-shadow: -1px -1px 0 #ff9c5e, 1px -1px 0 #ff9c5e, -1px 1px 0 #ff9c5e, 1px 1px 0 #ff9c5e;
+    text-shadow: -1px -1px 0 #FF914D, 1px -1px 0 #FF914D, -1px 1px 0 #FF914D, 1px 1px 0 #FF914D;
     color: white;
 }
 
+nav > ul > li > img:first-child {
+    margin-right: 5px;
+}
+
 nav > ul:last-child > li:last-child > a {
-    background-color: #ff5e71;
+    background-color: #FF5757;
     padding: 10px 20px;
     border-radius: 30px;
     color: white;
+    transition: all 0.15s linear;
 }
 
 nav > ul:last-child > li:last-child > a:hover {
     text-shadow: none;
+    background-color: #d23b3b;
 }
 
 a {
@@ -71,17 +77,69 @@ a {
     margin: auto;
 }
 
-.join-poll {
+.subcontainer {
     text-align: center;
     margin: 50px;
 }
 
-.join-poll h1 {
+.title {
     font-weight: normal;
     padding: 15px;
     background-color: #FFEC9E;
     width: fit-content;
     margin: auto;
+    margin-bottom: 45px;
     border-radius: 10px;
     border: 1px solid black;
+}
+
+.subtitle {
+    font-weight: normal;
+}
+
+.join-poll-id-input {
+    margin: 45px 0;
+}
+
+.id-input {
+    background-color: #FFEC9E;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+}
+
+.id-input:focus, .id-input:valid {
+    border: 3px solid #FF5757;
+}
+
+.submit-button {
+    background-color: #FF5757;
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.submit-button:hover {
+    background-color: #d23b3b;
+}
+
+.index-container > h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.subcontainer > a {
+    margin-top: 45px;
 }

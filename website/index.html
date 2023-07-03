@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favpolls.com</title>
+    <link rel="shortcut icon" href="root/images/logo-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="root/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
         <nav>
             <ul>
                 <li>
+                    <img src="root/images/logo-icon.png" alt="favpolls-logo-icon" width="40px">
                     <img src="root/images/logo-text.svg" alt="favpolls-logo-text" width="200px">
                 </li>
                 <li><a href="">Create Poll</a></li>
@@ -27,10 +29,29 @@
     </header>
     <main>
         <div class="index-container">
-            <div class="join-poll">
-                <h1>Want to participate in a poll?</h1>
+            <div class="subcontainer">
+                <h1 class="title">Want to participate in a poll?</h1>
+                <h2 class="subtitle">Input the poll ID below:</h2>
+                <form action="">
+                    <div class="join-poll-id-input">
+                        <input type="text" class="id-input" maxlength="1" required>
+                        <input type="text" class="id-input" maxlength="1" required>
+                        <input type="text" class="id-input" maxlength="1" required>
+                        <input type="text" class="id-input" maxlength="1" required>
+                        <input type="text" class="id-input" maxlength="1" required>
+                        <input type="text" class="id-input" maxlength="1" required>
+                    </div>
+                    <input type="submit" value="Join" class="submit-button">
+                </form>
+            </div>
+            <h3>OR</h3>
+            <div class="subcontainer">
+                <h1 class="title">Want to create a poll?</h1>
+                <a href="" class="submit-button">Create!</a>
             </div>
         </div>
     </main>
 </body>
+<script src="root/js/jquery/jquery.js"></script>
+<script src="root/js/id-input.js"></script>
 </html>
