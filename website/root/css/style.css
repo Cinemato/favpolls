@@ -17,6 +17,7 @@ header {
     position: sticky;
     top: 0;
     border: 0.5px solid black;
+    z-index: 500;
 }
 
 nav {
@@ -51,21 +52,17 @@ ul > li > a:hover {
     color: white;
 }
 
-nav > ul > li > img:first-child {
+nav > ul > li > a > img:first-child {
     margin-right: 5px;
 }
 
-nav > ul:last-child > li:last-child > a {
-    background-color: #FF5757;
-    padding: 10px 20px;
-    border-radius: 30px;
-    color: white;
-    transition: all 0.15s linear;
+nav > ul > li:first-child > a {
+    padding: 0;
 }
 
-nav > ul:last-child > li:last-child > a:hover {
-    text-shadow: none;
-    background-color: #d23b3b;
+nav > ul:last-child > li:last-child > a {
+    padding: 10px 20px;
+    border-radius: 30px;
 }
 
 a {
@@ -119,19 +116,23 @@ a {
     border: 3px solid #FF5757;
 }
 
-.submit-button {
+.button {
     background-color: #FF5757;
-    padding: 15px 30px;
-    border-radius: 30px;
     color: white;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
     transition: all 0.15s linear;
 }
 
-.submit-button:hover {
+.button:hover {
     background-color: #d23b3b;
+    text-shadow: none;
+}
+
+.submit-button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.5rem;
 }
 
 .index-container > h3 {
@@ -142,4 +143,73 @@ a {
 
 .subcontainer > a {
     margin-top: 45px;
+}
+
+.create-poll-container {
+    width: 50%;
+    margin: auto;
+    background-color: #FFEC9E;
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid black
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-input:last-of-type {
+    margin-bottom: 10px;
+}
+
+.form-input > label {
+    font-size: 1.2rem;
+}
+
+.form-input input[type="text"] {
+    height: 40px;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.form-option {
+    position: relative;
+    display: flex;
+}
+
+.form-option > img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.form-option > input {
+    width: 100%;
+}
+
+.side-button {
+    float: left;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button > img {
+    margin-left: 5px;
 }

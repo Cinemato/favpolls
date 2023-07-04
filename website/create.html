@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>favpolls.com</title>
+    <link rel="shortcut icon" href="root/images/logo/logo-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="root/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="root/images/logo/logo-icon.png" alt="favpolls-logo-icon" width="40px">
+                        <img src="root/images/logo/logo-text.svg" alt="favpolls-logo-text" width="200px">
+                    </a>      
+                </li>
+                <li><a href="create.html">Create Poll</a></li>
+                <li><a href="index.html">Join Poll</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Login</a></li>
+                <li><a href="" class="button">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="index-container">
+            <div class="subcontainer">
+                <h1 class="title">Poll Creator</h1>
+                <h2 class="subtitle">Complete the form below to create your poll!</h2>
+                <form action="">
+                    <div class="create-poll-container" style="padding-bottom: 65px;">
+                        <div class="form-input">
+                            <label for="question">Question:</label>
+                            <input type="text" name="question" placeholder="Type the poll question here">
+                        </div>
+                        <div class="form-input form-options">
+                            <label for="options">Answer Options:</label>
+                            <div class="form-option">
+                                <input type="text" name="option1" placeholder="Option 1">
+                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
+                            </div>
+                            <div class="form-option">
+                                <input type="text" name="option2" placeholder="Option 2">
+                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
+                            </div>
+                            <div class="form-option">
+                                <input type="text" name="option3" placeholder="Option 3">
+                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
+                            </div>
+                        </div>
+                        <button type="button" class="button side-button icon-button">Add Option <img src="root/images/icons/plus.svg" width="25px"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="root/js/jquery/jquery.js"></script>
+<script src="root/js/answer-options.js"></script>
+</html>
