@@ -32,28 +32,29 @@
     <main>
         <div class="index-container">
             <div class="subcontainer">
-                <h1 class="title">Want to participate in a poll?</h1>
-                <h2 class="subtitle">Input the poll ID below:</h2>
+                <h1 class="title">Register Page</h1>
                 <form action="">
-                    <div class="join-poll-id-input">
-                        <input type="text" class="id-input" maxlength="1" required>
-                        <input type="text" class="id-input" maxlength="1" required>
-                        <input type="text" class="id-input" maxlength="1" required>
-                        <input type="text" class="id-input" maxlength="1" required>
-                        <input type="text" class="id-input" maxlength="1" required>
-                        <input type="text" class="id-input" maxlength="1" required>
+                    <div class="form-container">
+                        <div class="form-input">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" placeholder="Type your account email here" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" placeholder="Type your account password here" required>
+                        </div>
+                        <div class="form-input">
+                            <label for="password">Confirm Password:</label>
+                            <input type="password" name="password" placeholder="Repeat your account password here" required>
+                        </div>
+                        <p class="side-link">Already have an account? <a href="login.html">Login!</a></p>              
+                        <button type="submit" class="button submit-button auth-button">Register</button>
                     </div>
-                    <input type="submit" value="Join" class="button submit-button">
                 </form>
-            </div>
-            <h3>OR</h3>
-            <div class="subcontainer">
-                <h1 class="title">Want to create a poll?</h1>
-                <a href="create.html" class="button submit-button">Create!</a>
             </div>
         </div>
     </main>
 </body>
 <script src="root/js/jquery/jquery.js"></script>
-<script src="root/js/id-input.js"></script>
+<script src="root/js/answer-options.js"></script>
 </html>

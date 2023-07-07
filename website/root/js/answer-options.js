@@ -3,7 +3,7 @@ $(document).ready(() => {
         let option = `
         <div class="form-option">
             <input type="text" name="option${$(".form-option").length + 1}" placeholder="Option ${$(".form-option").length + 1}">
-            <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
+            <img src="root/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
         </div>`
 
         $(".form-options").append(option);
@@ -20,8 +20,10 @@ const removeOption = (target) => {
         }
 
         $(".form-option").each((index, option) => {
-            $(option).find("input").attr("placeholder", `Option ${index + 1}`);
-            $(option).find("input").attr("name", `option${index + 1}`);
+            $(option).find("input").attr({
+                "placeholder": `Option ${index + 1}`,
+                "name": `option${index + 1}`
+            });
         })
     })
 }

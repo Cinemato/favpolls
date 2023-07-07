@@ -5,9 +5,9 @@
     font-family: 'Lilita One', cursive;
 }
 
-body {
-    /* background-color: #ff9c5e; */
+body {  
     background-color: #abcc6b;
+    /* background-color: #ff9c5e; */
     /* background-color: #F0FFCE; */
     /* background-color: #e2ff9e; */
 }
@@ -130,6 +130,7 @@ a {
 }
 
 .submit-button {
+    margin-top: 25px;
     padding: 15px 30px;
     border-radius: 30px;
     font-size: 1.5rem;
@@ -145,7 +146,7 @@ a {
     margin-top: 45px;
 }
 
-.create-poll-container {
+.form-container {
     width: 50%;
     margin: auto;
     background-color: #FFEC9E;
@@ -170,7 +171,7 @@ a {
     font-size: 1.2rem;
 }
 
-.form-input input[type="text"] {
+.form-input input[type="text"], .form-input input[type="password"], .form-input input[type="email"]   {
     height: 40px;
     padding: 5px 15px;
     outline: none;
@@ -178,6 +179,11 @@ a {
     border: 1px solid black;
     font-size: 1.1rem;
     margin-top: 10px;
+    transition: all 0.15s linear;
+}
+
+.form-input input[type="text"]:focus, .form-input input[type="password"]:focus, .form-input input[type="email"]:focus  {
+    border: 1.5px solid #FF5757;
 }
 
 .form-option {
@@ -191,6 +197,17 @@ a {
     top: 15px;
     background-color: #fff;
     cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.form-option > img:hover {
+    width: 34px;
+    right: 8px;
+    top: 13px;
+}
+
+.remove-option {
+    display: none;
 }
 
 .form-option > input {
@@ -198,10 +215,10 @@ a {
 }
 
 .side-button {
-    float: left;
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1rem;
+    align-self: flex-start;
 }
 
 .icon-button {
@@ -212,4 +229,25 @@ a {
 
 .icon-button > img {
     margin-left: 5px;
+}
+
+.auth-button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.side-link {
+    float: left;
+}
+
+.side-link > a {
+    color: #FF5757;
+    border-bottom: 0px solid #FF5757;
+    padding-bottom: 1px;
+    transition: all 0.15s linear;
+}
+
+.side-link > a:hover {
+    border-bottom: 3px solid #FF5757;
 }

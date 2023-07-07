@@ -24,8 +24,8 @@
                 <li><a href="index.html">Join Poll</a></li>
             </ul>
             <ul>
-                <li><a href="">Login</a></li>
-                <li><a href="" class="button">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="button">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -35,27 +35,26 @@
                 <h1 class="title">Poll Creator</h1>
                 <h2 class="subtitle">Complete the form below to create your poll!</h2>
                 <form action="">
-                    <div class="create-poll-container" style="padding-bottom: 65px;">
+                    <div class="form-container">
                         <div class="form-input">
                             <label for="question">Question:</label>
-                            <input type="text" name="question" placeholder="Type the poll question here">
+                            <input type="text" name="question" placeholder="Type the poll question here" required>
                         </div>
-                        <div class="form-input form-options">
-                            <label for="options">Answer Options:</label>
-                            <div class="form-option">
-                                <input type="text" name="option1" placeholder="Option 1">
-                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
-                            </div>
-                            <div class="form-option">
-                                <input type="text" name="option2" placeholder="Option 2">
-                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
-                            </div>
-                            <div class="form-option">
-                                <input type="text" name="option3" placeholder="Option 3">
-                                <img src="root/images/icons/cross.svg" width="30px" class="remove-option" onclick="removeOption(this)">
-                            </div>
-                        </div>
-                        <button type="button" class="button side-button icon-button">Add Option <img src="root/images/icons/plus.svg" width="25px"></button>
+                        <div class="form-input">
+                            <div class="form-input form-options">
+                                <label for="options">Answer Options:</label>
+                                <div class="form-option">
+                                    <input type="text" name="option1" placeholder="Option 1" required>
+                                    <img src="root/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
+                                </div>
+                                <div class="form-option">
+                                    <input type="text" name="option2" placeholder="Option 2" required>
+                                    <img src="root/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
+                                </div>
+                            </div>     
+                            <button type="button" class="button side-button icon-button">Add Option <img src="root/images/icons/plus.svg" alt="add-option" width="25px"></button>
+                        </div>                
+                        <button type="submit" class="button submit-button">Create!</button>
                     </div>
                 </form>
             </div>
