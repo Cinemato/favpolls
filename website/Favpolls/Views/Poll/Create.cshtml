@@ -1,0 +1,33 @@
+﻿<div class="index-container">
+    <div class="subcontainer">
+        <h1 class="title">Poll Creator</h1>
+        <h2 class="subtitle">Complete the form below to create your poll!</h2>
+        <form action="">
+            <div class="form-container">
+                <div class="form-input">
+                    <label for="question">Question:</label>
+                    <input type="text" name="question" placeholder="Type the poll question here" required>
+                </div>
+                <div class="form-input">
+                    <div class="form-input form-options">
+                        <label for="options">Answer Options:</label>
+                        <div class="form-option">
+                            <input type="text" name="option1" placeholder="Option 1" required>
+                            <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
+                        </div>
+                        <div class="form-option">
+                            <input type="text" name="option2" placeholder="Option 2" required>
+                            <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
+                        </div>
+                    </div>
+                    <button type="button" class="button side-button icon-button">Add Option <img src="~/images/icons/plus.svg" alt="add-option" width="25px"></button>
+                </div>
+                <button type="submit" class="button submit-button">Create!</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/answer-options.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lilita One', cursive;
+}
+
+body {  
+    background-color: #abcc6b;
+    /* background-color: #ff9c5e; */
+    /* background-color: #F0FFCE; */
+    /* background-color: #e2ff9e; */
+}
+
+header {
+    background-color: #FFEC9E;
+    position: sticky;
+    top: 0;
+    border: 0.5px solid black;
+    z-index: 500;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 15px 0px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul > li {
+    margin: 0 15px;
+    font-size: 1.1rem;
+}
+
+ul > li > a {
+    color: black;
+    transition: all 0.15s linear;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+ul > li > a:hover {
+    text-shadow: -1px -1px 0 #FF914D, 1px -1px 0 #FF914D, -1px 1px 0 #FF914D, 1px 1px 0 #FF914D;
+    color: white;
+}
+
+nav > ul > li > a > img:first-child {
+    margin-right: 5px;
+}
+
+nav > ul > li:first-child > a {
+    padding: 0;
+}
+
+nav > ul:last-child > li:last-child > a {
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.index-container {
+    width: 80%;
+    margin: auto;
+}
+
+.subcontainer {
+    text-align: center;
+    margin: 50px;
+}
+
+.title {
+    font-weight: normal;
+    padding: 15px;
+    background-color: #FFEC9E;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 45px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.subtitle {
+    font-weight: normal;
+}
+
+.join-poll-id-input {
+    margin: 45px 0;
+}
+
+.id-input {
+    background-color: #FFEC9E;
+    width: 100px;
+    text-align: center;
+    outline: none;
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 3rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+}
+
+.id-input:focus, .id-input:valid {
+    border: 3px solid #FF5757;
+}
+
+.button {
+    background-color: #FF5757;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.button:hover {
+    background-color: #d23b3b;
+    text-shadow: none;
+}
+
+.submit-button {
+    margin-top: 25px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+}
+
+.index-container > h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.subcontainer > a {
+    margin-top: 45px;
+}
+
+.form-container {
+    width: 50%;
+    margin: auto;
+    background-color: #FFEC9E;
+    margin-top: 35px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid black
+}
+
+.auth-form {
+    width: 550px;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-input:last-of-type {
+    margin-bottom: 10px;
+}
+
+.form-input > label {
+    font-size: 1.2rem;
+}
+
+.form-input input[type="text"], .form-input input[type="password"], .form-input input[type="email"]   {
+    height: 40px;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: all 0.15s linear;
+}
+
+.form-input input[type="text"]:focus, .form-input input[type="password"]:focus, .form-input input[type="email"]:focus  {
+    border: 1.5px solid #FF5757;
+}
+
+.form-option {
+    position: relative;
+    display: flex;
+}
+
+.form-option > img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+.form-option > img:hover {
+    width: 34px;
+    right: 8px;
+    top: 13px;
+}
+
+.remove-option {
+    display: none;
+}
+
+.form-option > input {
+    width: 100%;
+}
+
+.side-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    align-self: flex-start;
+}
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button > img {
+    margin-left: 5px;
+}
+
+.auth-button {
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.side-link {
+    float: left;
+}
+
+.side-link > a {
+    color: #FF5757;
+    border-bottom: 0px solid #FF5757;
+    padding-bottom: 1px;
+    transition: all 0.15s linear;
+}
+
+.side-link > a:hover {
+    border-bottom: 3px solid #FF5757;
+}
