@@ -73,3 +73,13 @@ D:\GitHubProjects\favpolls\website\Favpolls\obj\Debug\net7.0\refint\Favpolls.dll
 D:\GitHubProjects\favpolls\website\Favpolls\obj\Debug\net7.0\Favpolls.pdb
 D:\GitHubProjects\favpolls\website\Favpolls\obj\Debug\net7.0\Favpolls.genruntimeconfig.cache
 D:\GitHubProjects\favpolls\website\Favpolls\obj\Debug\net7.0\ref\Favpolls.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.DataAccess.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.Models.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.Utility.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.DataAccess.pdb
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.Models.pdb
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Favpolls.Utility.pdb
+D:\GitHubProjects\favpolls\website\Favpolls\obj\Debug\net7.0\Favpolls.MvcApplicationPartsAssemblyInfo.cs
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\GitHubProjects\favpolls\website\Favpolls\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll

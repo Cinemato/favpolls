@@ -1,0 +1,17 @@
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.deps.json
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.pdb
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Models.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Utility.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Models.pdb
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Utility.pdb
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.AssemblyReference.cache
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.AssemblyInfoInputs.cache
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.AssemblyInfo.cs
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.CoreCompileInputs.cache
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.CopyComplete
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\refint\Favpolls.DataAccess.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.pdb
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\ref\Favpolls.DataAccess.dll

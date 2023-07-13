@@ -19,4 +19,10 @@
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Favpolls.DataAccess\Favpolls.DataAccess.csproj" />
+    <ProjectReference Include="..\Favpolls.Models\Favpolls.Models.csproj" />
+    <ProjectReference Include="..\Favpolls.Utility\Favpolls.Utility.csproj" />
+  </ItemGroup>
+
 </Project>
