@@ -2,7 +2,7 @@ $(document).ready(() => {
     $(".side-button").click(() => {
         let option = `
         <div class="form-option">
-            <input type="text" name="option${$(".form-option").length + 1}" placeholder="Option ${$(".form-option").length + 1}">
+            <input name="PollOptions[${$(".form-option").length}].Option" type="text" placeholder="Option ${$(".form-option").length + 1}">
             <img src="/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
         </div>`
 
@@ -20,9 +20,9 @@ const removeOption = (target) => {
         }
 
         $(".form-option").each((index, option) => {
-            $(option).find("input").attr({
+            $(option).find("input:last").attr({
                 "placeholder": `Option ${index + 1}`,
-                "name": `option${index + 1}`
+                "name": `PollOptions[${index}].Option`
             });
         })
     })

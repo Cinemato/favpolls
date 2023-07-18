@@ -15,3 +15,5 @@ D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\refint\Favpolls.DataAccess.dll
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.pdb
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\ref\Favpolls.DataAccess.dll
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.runtimeconfig.json
+D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.genruntimeconfig.cache

@@ -1,23 +1,23 @@
-﻿@model Poll
+﻿@model PollVM
 <div class="index-container">
     <div class="subcontainer">
         <h1 class="title">Poll Creator</h1>
         <h2 class="subtitle">Complete the form below to create your poll!</h2>
-        <form method="POST">
+        <form method="POST" asp-action="Create">
             <div class="form-container">
                 <div class="form-input">
-                    <label for="question">Question:</label>
-                    <input type="text" name="question" placeholder="Type the poll question here" required>
+                    <label asp-for="Poll.Question">Question:</label>
+                    <input asp-for="Poll.Question" type="text" placeholder="Type the poll question here" required>
                 </div>
                 <div class="form-input">
                     <div class="form-input form-options">
-                        <label for="options">Answer Options:</label>
+                        <label>Answer Options:</label>
                         <div class="form-option">
-                            <input type="text" name="option1" placeholder="Option 1" required>
+                            <input name="PollOptions[0].Option" type="text" placeholder="Option 1" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>
                         <div class="form-option">
-                            <input type="text" name="option2" placeholder="Option 2" required>
+                            <input name="PollOptions[1].Option" type="text" placeholder="Option 2" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>
                     </div>

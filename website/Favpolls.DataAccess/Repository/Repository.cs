@@ -26,6 +26,11 @@ namespace Favpolls.DataAccess.Repository
             dbSet.Add(entity);
         }
 
+        public void AddRange(IEnumerable<T> entities)
+        {
+            dbSet.AddRange(entities);
+        }
+
         public T Get(Expression<Func<T, bool>> filter, string? includeProps = null)
         {
             IQueryable<T> query = dbSet;

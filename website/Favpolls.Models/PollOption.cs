@@ -18,10 +18,9 @@ namespace Favpolls.Models
         public string Option { get; set; } = "";
 
         [Required]
-        public int PollId { get; set; }
+        public int? PollId { get; set; }
 
         [ForeignKey("PollId")]
-        [ValidateNever]
-        public Poll Poll { get; set; } = new Poll();
+        public virtual Poll Poll { get; set; }
     }
 }

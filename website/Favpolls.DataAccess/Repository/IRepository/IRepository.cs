@@ -14,6 +14,7 @@ namespace Favpolls.DataAccess.Repository.IRepository
         T Get(Expression<Func<T, bool>> filter, string? includeProps = null);
 
         void Add(T entity);
+        void AddRange(IEnumerable<T> entities);
 
         void Remove(T entity);
 

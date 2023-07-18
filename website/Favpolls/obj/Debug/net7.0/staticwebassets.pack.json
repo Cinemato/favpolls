@@ -25,8 +25,12 @@
       "PackagePath": "staticwebassets\\images\\logo\\logo-text.svg"
     },
     {
-      "Id": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\answer-options.js",
+      "PackagePath": "staticwebassets\\js\\answer-options.js"
+    },
+    {
+      "Id": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\id-input.js",
+      "PackagePath": "staticwebassets\\js\\id-input.js"
     },
     {
       "Id": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\LICENSE",

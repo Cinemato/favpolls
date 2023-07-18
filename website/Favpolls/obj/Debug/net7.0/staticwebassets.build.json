@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MeWaD+cxPyQ3G1E/9aA4tA5jTbEgI854/EQnj4ElPBI=",
+  "Hash": "yDclk7Lz9+L1d6NnKrJSU3rg5o8oetuKaIGynegbtAA=",
   "Source": "Favpolls",
   "BasePath": "_content/Favpolls",
   "Mode": "Default",
@@ -136,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\images\\logo\\logo-text.svg"
     },
     {
-      "Identity": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\site.js",
+      "Identity": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\answer-options.js",
       "SourceId": "Favpolls",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\",
       "BasePath": "_content/Favpolls",
-      "RelativePath": "js/site.js",
+      "RelativePath": "js/answer-options.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,7 +150,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\site.js"
+      "OriginalItemSpec": "wwwroot\\js\\answer-options.js"
+    },
+    {
+      "Identity": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\js\\id-input.js",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "js/id-input.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\id-input.js"
     },
     {
       "Identity": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

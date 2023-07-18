@@ -1435,7 +1435,8 @@
         "dependencies": {
           "Favpolls.Models": "1.0.0",
           "Favpolls.Utility": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "7.0.8"
+          "Microsoft.EntityFrameworkCore": "7.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.8"
         },
         "runtime": {
           "Favpolls.DataAccess.dll": {}
