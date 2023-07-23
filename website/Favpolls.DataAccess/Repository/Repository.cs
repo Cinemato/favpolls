@@ -47,9 +47,11 @@ namespace Favpolls.DataAccess.Repository
             return query.FirstOrDefault();
         }
 
-        public IEnumerable<T> GetAll(string? includeProps = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProps = null)
         {
             IQueryable<T> query = dbSet;
+            if (filter != null)
+                query = query.Where(filter);
 
             if (!string.IsNullOrEmpty(includeProps))
             {

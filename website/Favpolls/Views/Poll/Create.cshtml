@@ -4,6 +4,7 @@
         <h1 class="title">Poll Creator</h1>
         <h2 class="subtitle">Complete the form below to create your poll!</h2>
         <form method="POST" asp-action="Create">
+            @*<input asp-for="Poll.Id" type="hidden" />*@
             <div class="form-container">
                 <div class="form-input">
                     <label asp-for="Poll.Question">Question:</label>
@@ -13,10 +14,14 @@
                     <div class="form-input form-options">
                         <label>Answer Options:</label>
                         <div class="form-option">
+                            @*<input name="PollOptions[0].Id" type="hidden" />
+                            <input name="PollOptions[0].PollId" type="hidden" />*@
                             <input name="PollOptions[0].Option" type="text" placeholder="Option 1" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>
                         <div class="form-option">
+                            @*<input name="PollOptions[1].Id" type="hidden" />
+                            <input name="PollOptions[1].PollId" type="hidden" />*@
                             <input name="PollOptions[1].Option" type="text" placeholder="Option 2" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>

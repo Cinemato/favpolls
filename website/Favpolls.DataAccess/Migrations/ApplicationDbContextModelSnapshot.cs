@@ -30,6 +30,10 @@ namespace Favpolls.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Question")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -53,6 +57,9 @@ namespace Favpolls.DataAccess.Migrations
 
                     b.Property<int?>("PollId")
                         .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int>("VoteCount")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

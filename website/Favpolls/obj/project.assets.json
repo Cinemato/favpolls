@@ -8457,11 +8457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\Favpolls.csproj",
+      "projectUniqueName": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\Favpolls.csproj",
       "projectName": "Favpolls",
-      "projectPath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\Favpolls.csproj",
+      "projectPath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\Favpolls.csproj",
       "packagesPath": "C:\\Users\\alhar\\.nuget\\packages\\",
-      "outputPath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls\\obj\\",
+      "outputPath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8472,20 +8472,21 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\GitHubProjects\\favpolls\\website\\Favpolls.DataAccess\\Favpolls.DataAccess.csproj": {
-              "projectPath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls.DataAccess\\Favpolls.DataAccess.csproj"
+            "C:\\GitHub Projects\\favpolls\\website\\Favpolls.DataAccess\\Favpolls.DataAccess.csproj": {
+              "projectPath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls.DataAccess\\Favpolls.DataAccess.csproj"
             },
-            "D:\\GitHubProjects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj": {
-              "projectPath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj"
+            "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj": {
+              "projectPath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj"
             },
-            "D:\\GitHubProjects\\favpolls\\website\\Favpolls.Utility\\Favpolls.Utility.csproj": {
-              "projectPath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls.Utility\\Favpolls.Utility.csproj"
+            "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Utility\\Favpolls.Utility.csproj": {
+              "projectPath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Utility\\Favpolls.Utility.csproj"
             }
           }
         }
@@ -8534,7 +8535,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

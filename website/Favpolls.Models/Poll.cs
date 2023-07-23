@@ -14,5 +14,8 @@ namespace Favpolls.Models
 
         [Required]
         public string Question { get; set; } = "";
+
+        [Required]
+        public string Code { get; set; } = "";
     }
 }

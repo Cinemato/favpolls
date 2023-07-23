@@ -18,6 +18,9 @@ namespace Favpolls.Models
         public string Option { get; set; } = "";
 
         [Required]
+        public int VoteCount { get; set; } = 0;
+
+        [Required]
         public int? PollId { get; set; }
 
         [ForeignKey("PollId")]

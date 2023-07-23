@@ -1,16 +1,17 @@
 ﻿<div class="index-container">
     <div class="subcontainer">
         <h1 class="title">Want to participate in a poll?</h1>
-        <h2 class="subtitle">Input the poll ID below:</h2>
-        <form action="">
-            <div class="join-poll-id-input">
-                <input type="text" class="id-input" maxlength="1" required>
-                <input type="text" class="id-input" maxlength="1" required>
-                <input type="text" class="id-input" maxlength="1" required>
-                <input type="text" class="id-input" maxlength="1" required>
-                <input type="text" class="id-input" maxlength="1" required>
-                <input type="text" class="id-input" maxlength="1" required>
+        <h2 class="subtitle">Input the poll code below:</h2>
+        <form asp-action="Join" method="GET">
+            <div class="join-poll-code-input">
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
+                <input type="text" class="code-input" maxlength="1" required>
             </div>
+            <input type="hidden" name="code" class="code-input-hidden" />
             <input type="submit" value="Join" class="button submit-button">
         </form>
     </div>
@@ -22,5 +23,5 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/id-input.js" asp-append-version="true"></script>
+    <script src="~/js/code-input.js" asp-append-version="true"></script>
 }

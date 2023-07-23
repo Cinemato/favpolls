@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oM5NQmtqvr+43R5GR2QSqajfRPNJlMtv5Del3RSgCqfNZL7ZymlBlFKybEczo8LypaTAsnRkiKfhpUaiGaI0Gw==",
+  "dgSpecHash": "iNYx5/PkbA56mnjWa2XUnA4fupHgBx9WRXpmIV1e58oku8GbeseLj3a6tJ7TL2cDQ/MDvVcpPubouPa/9gp7kw==",
   "success": true,
-  "projectFilePath": "D:\\GitHubProjects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj",
+  "projectFilePath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Models\\Favpolls.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alhar\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\alhar\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

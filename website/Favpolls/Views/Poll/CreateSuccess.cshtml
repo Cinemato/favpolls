@@ -1,0 +1,18 @@
+﻿@model Poll
+<div class="index-container">
+    <div class="subcontainer">
+        <img src="~/images/icons/checkmark-circle.svg" alt="checkmark" width="150px" class="success-icon">
+        <h1 class="title">Share your new poll!</h1>
+        <div class="form-container">
+            <div class="poll-info">
+                <p>Poll Code:</p>
+                <h3 class="poll-code">@Model.Code</h3>
+            </div>
+            <h3 style="font-size: 35px; font-weight: normal;">OR</h3>
+            <div class="poll-info">
+                <p>Poll Link:</p>
+                <p>https://www.favpolls.com/join?poll=@Model.Code</p>
+            </div>
+        </div>
+    </div>
+</div>

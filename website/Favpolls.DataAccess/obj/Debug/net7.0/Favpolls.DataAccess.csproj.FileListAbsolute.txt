@@ -17,3 +17,22 @@ D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\ref\Favpolls.DataAccess.dll
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.runtimeconfig.json
 D:\GitHubProjects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.genruntimeconfig.cache
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.deps.json
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.runtimeconfig.json
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.dll
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.DataAccess.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Models.dll
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Utility.dll
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Models.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\bin\Debug\net7.0\Favpolls.Utility.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.AssemblyReference.cache
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.AssemblyInfoInputs.cache
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.AssemblyInfo.cs
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.CoreCompileInputs.cache
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.csproj.CopyComplete
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.dll
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\refint\Favpolls.DataAccess.dll
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\Favpolls.DataAccess.genruntimeconfig.cache
+C:\GitHub Projects\favpolls\website\Favpolls.DataAccess\obj\Debug\net7.0\ref\Favpolls.DataAccess.dll

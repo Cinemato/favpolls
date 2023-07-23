@@ -94,11 +94,11 @@ a {
     font-weight: normal;
 }
 
-.join-poll-id-input {
+.join-poll-code-input {
     margin: 45px 0;
 }
 
-.id-input {
+.code-input {
     background-color: #FFEC9E;
     width: 100px;
     text-align: center;
@@ -112,7 +112,7 @@ a {
     transition: 0.1s ease;
 }
 
-.id-input:focus, .id-input:valid {
+.code-input:focus, .code-input:valid {
     border: 3px solid #FF5757;
 }
 
@@ -254,4 +254,117 @@ a {
 
 .side-link > a:hover {
     border-bottom: 3px solid #FF5757;
+}
+
+.poll-code {
+    font-size: 45px;
+    letter-spacing: 10px;
+    font-weight: normal;
+}
+
+.poll-info > p {
+    font-size: 20px;
+}
+
+.poll-info > p:first-child {
+    margin-bottom: 10px;
+}
+
+.poll-info {
+    margin: 30px 0px;
+}
+
+.poll-info:first-child {
+    margin-top: 0;
+}
+
+.poll-info:last-child {
+    margin-bottom: 0;
+}
+
+.success-icon {
+    margin-bottom: 15px;
+}
+
+.poll-container {
+    width: 70%;
+}
+
+.poll-option {
+    width: 100%;
+    background-color: azure;
+    margin: 15px 0;
+    padding: 20px 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.poll-option:hover {
+    background-color: rgb(209, 228, 228);
+}
+
+.poll-option-opened:hover {
+    background-color: azure;
+}
+
+.poll-option-selected {
+    box-shadow: 0.3px 0.3px 0px 4.5px #9DC8EE;
+}
+
+.poll-option > p {
+    transition: all 0.75s ease-out;
+}
+
+.poll-option > p:last-child {
+    color: white;
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 30px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.poll-side-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    align-items: flex-start;
+}
+
+.poll-side-info > p {
+    margin-bottom: 7px;
+}
+
+.poll-container > .submit-button {
+    margin-top: 15px;
+}
+
+.option-progress {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    left: 0;
+    top: 0;
+    max-width: none;
+    transition: all 0.75s ease-out;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.option-progress > span {
+    color: white;
+    font-size: 25px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    margin-right: 20px;
+    opacity: 0;
+    transition: all 1.25s ease-in;
 }
