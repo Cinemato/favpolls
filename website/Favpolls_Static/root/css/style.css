@@ -354,7 +354,7 @@ a {
     left: 0;
     top: 0;
     max-width: none;
-    transition: all 0.75s ease-out;
+    transition: all 0.75s ease-out, border-radius 2s ease-out;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -367,4 +367,10 @@ a {
     margin-right: 20px;
     opacity: 0;
     transition: all 1.25s ease-in;
+}
+
+.voted-option {
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 15px;
 }

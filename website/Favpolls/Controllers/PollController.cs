@@ -59,6 +59,25 @@ namespace Favpolls.Controllers
             return View(pollVM);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SubmitVote(PollVM pollVM)
+        {
+            Poll poll = _unitOfWork.Poll.Get(p => p.Id == pollVM.Poll.Id);
+            pollVM.Poll = poll;
+
+            List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();       
+            pollVM.PollOptions = pollOptions;
+
+            PollOption selectedOption = _unitOfWork.PollOption.Get(o => o.Id == pollVM.SelectedOptionId);
+            selectedOption.VoteCount += 1;
+            pollVM.SelectedOption = selectedOption;
+
+            _unitOfWork.Save();
+
+            return View(pollVM);
+        }
+
         public static string GenerateCode(int length)
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";

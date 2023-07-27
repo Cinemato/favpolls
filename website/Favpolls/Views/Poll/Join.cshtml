@@ -2,26 +2,31 @@
 <div class="index-container">
     <div class="subcontainer">
         <h1 class="title">@Model.Poll.Question</h1>
-        <div class="form-container poll-container">
-            <div class="poll-options-container">
-                <input type="hidden" name="total-votes" value="@Model.TotalVotes" class="total-votes">
-                @foreach (var option in Model.PollOptions)
-                {
-                    <div class="poll-option">
-                        <input type="hidden" name="percentage" value="0">
-                        <input type="hidden" name="option-vote-count" value="@option.VoteCount">
-                        <div class="option-progress"><span></span></div>
-                        <p>@option.Option</p>
-                        <p>@option.Option</p>
-                    </div>
-                }
+        <form method="POST" asp-action="SubmitVote">
+            <div class="form-container poll-container">
+                <div class="poll-options-container">
+                    <input type="hidden" name="total-votes" value="@Model.TotalVotes" class="total-votes">
+                    <input asp-for="SelectedOptionId" type="hidden" class="option-id" />
+                    <input asp-for="Poll.Id" type="hidden" value="@Model.Poll.Id" />
+                    @foreach (var option in Model.PollOptions)
+                    {
+                        <div class="poll-option">
+                            <input type="hidden" name="percentage" value="0">
+                            <input type="hidden" name="option-vote-count" value="@option.VoteCount">
+                            <input type="hidden" value="@option.Id">
+                            <div class="option-progress"><span></span></div>
+                            <p>@option.Option</p>
+                            <p>@option.Option</p>
+                        </div>
+                    }
+                </div>
+                <div class="poll-side-info">
+                    <p>Poll Code: @Model.Poll.Code</p>
+                    <p>Created By: Khaled</p>
+                </div>
+                <button type="submit" class="button submit-button">Submit</button>
             </div>
-            <div class="poll-side-info">
-                <p>Poll Code: @Model.Poll.Code</p>
-                <p>Created By: Khaled</p>
-            </div>
-            <button type="submit" class="button submit-button">Submit</button>
-        </div>
+        </form> 
     </div>
 </div>
 

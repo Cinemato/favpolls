@@ -14,5 +14,9 @@ namespace Favpolls.Models.ViewModels
         public List<PollOption> PollOptions { get; set; }
 
         public int TotalVotes { get; set; } = 0;
+
+        public int SelectedOptionId { get; set; } = -1;
+
+        public PollOption SelectedOption { get; set; }
     }
 }

@@ -2,6 +2,7 @@ $(document).ready(() => {
     $(".poll-option").each((index, option) => {
         $(option).click(() => {
             $(option).addClass("poll-option-selected");
+            $(".option-id").val($(option).find("input:last").val());
             $(".poll-option").each((index2, option2) => {
                 if (index != index2)
                     $(option2).removeClass("poll-option-selected");
@@ -25,7 +26,7 @@ function progressColor(progress) {
 
 function openOption(option, offset) {
     let prevProgress = parseInt($(option).find("input:first").val());
-    let progress = ((parseInt($(option).find("input:last").val()) + offset) / (parseInt($(".total-votes").val()) + 1)) * 100;
+    let progress = ((parseInt($(option).find("input:eq(1)").val()) + offset) / (parseInt($(".total-votes").val()) + 1)) * 100;
 
     if (progress == 100) {
         $(option).find(".option-progress").css("border-radius", "15px");
@@ -60,8 +61,6 @@ function openOption(option, offset) {
             });
         }
     })
-  
-    
 
     $(option).addClass("poll-option-opened");
     $(option).find("input:first").val(progress);
