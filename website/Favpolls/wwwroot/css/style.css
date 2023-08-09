@@ -307,6 +307,10 @@ a {
     background-color: rgb(209, 228, 228);
 }
 
+.poll-option-opened {
+    margin: 25px 0;
+}
+
 .poll-option-opened:hover {
     background-color: azure;
 }
@@ -323,9 +327,9 @@ a {
     color: white;
     opacity: 0;
     position: absolute;
-    left: 20px;
-    top: 15px;
-    font-size: 30px;
+    left: 10px;
+    top: -20px;
+    font-size: 35px;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
