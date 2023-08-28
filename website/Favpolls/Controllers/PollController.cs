@@ -2,6 +2,7 @@
 using Favpolls.Models;
 using Favpolls.DataAccess.Repository.IRepository;
 using Favpolls.Models.ViewModels;
+using System.Security.Claims;
 
 namespace Favpolls.Controllers
 {
@@ -33,6 +34,11 @@ namespace Favpolls.Controllers
             var code = GenerateCode(6);
             pollVM.Poll.Code = code;
 
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                pollVM.Poll.UserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            }
+
             _unitOfWork.Save();
 
             return View("CreateSuccess", pollVM.Poll);
@@ -57,6 +63,45 @@ namespace Favpolls.Controllers
             };
 
             return View(pollVM);
+        }
+
+        public IActionResult AccountPolls()
+        {
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                List<PollVM> pollVMs = new List<PollVM>();
+                List<Poll> polls = _unitOfWork.Poll.GetAll(p => p.UserId == this.User.FindFirstValue(ClaimTypes.NameIdentifier)).ToList();
+                foreach (var poll in polls)
+                {
+                    List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();
+
+                    var total = 0;
+                    PollOption topVote = pollOptions[0];
+
+                    foreach (var option in pollOptions)
+                    {
+                        total += option.VoteCount;
+                        if (option.VoteCount > topVote.VoteCount)
+                        {
+                            topVote = option;
+                        }
+                    }
+
+                    PollVM pollVM = new PollVM()
+                    {
+                        Poll = poll,
+                        PollOptions = pollOptions,
+                        TotalVotes = total,
+                        SelectedOption = topVote
+                    };
+
+                    pollVMs.Add(pollVM);
+                }
+
+                return View(pollVMs);
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -90,7 +135,6 @@ namespace Favpolls.Controllers
             }
 
             var code = new String(stringChars);
-
             return code;
         }
     }

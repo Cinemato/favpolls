@@ -176,6 +176,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/GitHub Projects/favpolls/website/Favpolls/Views/Poll/AccountPolls.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxBY2NvdW50UG9sbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/GitHub Projects/favpolls/website/Favpolls/Views/Poll/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9sbFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
