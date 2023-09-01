@@ -97,6 +97,9 @@ a {
 
 .join-poll-code-input {
     margin: 45px 0;
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr 0.1fr;
+    place-content: center;
 }
 
 .code-input {
@@ -123,6 +126,7 @@ a {
     border: none;
     cursor: pointer;
     transition: all 0.15s linear;
+    text-align: center;
 }
 
 .button:hover {
@@ -148,7 +152,7 @@ a {
 }
 
 .form-container {
-    width: 50%;
+    width: 600px;
     margin: auto;
     background-color: #FFEC9E;
     margin-top: 35px;
@@ -383,6 +387,7 @@ a {
 .account-poll {
     text-align: left;
     margin-bottom: 25px;
+    display: flex;
 }
 
 .account-poll h1, .account-poll h2, .account-poll h3, .account-poll h4 {
@@ -422,8 +427,115 @@ a {
 .account-poll-buttons {
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
 }
 
 .account-poll .button {
     border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .poll-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .index-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .index-container {
+        width: 100%;
+    }
+
+    .subcontainer {
+        margin: 50px 15px;
+    }
+
+    .code-input {
+        width: 90px;
+        padding: 1rem 1rem;   
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .code-input {
+        width: 80px;
+        padding: 1rem 0.5rem;
+    }
+
+    .code-input {
+        margin: 0.25rem 0.25rem;
+    }
+
+    .join-poll-code-input {
+        margin: 30px 0;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+
+    .poll-option > p:last-child { 
+        font-size: 30px;
+    }
+
+    .account-poll {
+        flex-direction: column;
+    }
+
+    .account-poll-buttons {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 0;
+    }
+
+    .account-polls-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .title {
+        font-size: 25px;
+    }
+
+    .join-poll-code-input {
+        grid-template-columns: 0.20fr 0.20fr 0.20fr;
+        grid-template-rows: 0.20fr 0.20fr 0.20fr;
+        place-items: center;
+    }
+
+    .code-input {
+        margin: 0.25rem 0.25rem;
+    }
+
+    .join-poll-code-input {
+        margin: 30px 0;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .account-polls-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .poll-info > p:last-of-type {
+        font-size: 17px;
+    }
+
+    .poll-option > p:last-child { 
+        font-size: 25px;
+    }
+
+    .account-poll .submit-button {
+        padding: 10px 20px;
+    }
 }
