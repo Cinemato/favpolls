@@ -180,6 +180,11 @@ a {
     font-size: 1.2rem;
 }
 
+.form-input > h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
 .form-input input[type="text"], .form-input input[type="password"], .form-input input[type="email"]   {
     height: 40px;
     padding: 5px 15px;
@@ -221,6 +226,103 @@ a {
 
 .form-option > input {
     width: 100%;
+}
+
+.form-setting {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-setting > label {
+    margin-right: 7px;
+}
+
+.form-setting > select {
+    padding: 5px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 3px;
+    padding-bottom: 8px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.poll-settings-input {
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-left: 5px;
+    cursor:text;
+    display: none;
+}
+
+#settings-deadline {
+    position: relative;
+}
+
+#settings-deadline::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    padding: 100%;
+    padding-right: 5px;
+}
+
+#settings-votes {
+    padding: 7.3px 6px;
+    outline: none;
+}
+
+.form-setting > input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 0.5s linear;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox {
+    background-color: #FF5757;
+    border: none;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox:hover {
+    background-color: #d23b3b;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+.form-setting > select:hover, .custom-checkbox:hover {
+    background-color: rgb(239, 239, 239);
 }
 
 .side-button {

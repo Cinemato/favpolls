@@ -7,11 +7,11 @@
             @*<input asp-for="Poll.Id" type="hidden" />*@
             <div class="form-container">
                 <div class="form-input">
-                    <label asp-for="Poll.Question">Question:</label>
+                    <label for="Poll.Question">Question:</label>
                     <input asp-for="Poll.Question" type="text" placeholder="Type the poll question here" required>
                 </div>
                 <div class="form-input">
-                    <div class="form-input form-options">
+                    <div class="form-input form-options-container">
                         <label>Answer Options:</label>
                         <div class="form-option">
                             @*<input name="PollOptions[0].Id" type="hidden" />
@@ -28,6 +28,30 @@
                     </div>
                     <button type="button" class="button side-button icon-button">Add Option <img src="~/images/icons/plus.svg" alt="add-option" width="25px"></button>
                 </div>
+                <div class="form-input form-settings-container">
+                    <h3>Poll Settings:</h3>
+                    <div class="form-setting">
+                        <label for="poll-end">End poll after:</label>
+                        <select name="poll-end" id="poll-end" required>
+                            <option selected disabled hidden>Select...</option>
+                            <option value="deadline">Deadline date</option>
+                            <option value="votes">Number of votes</option>
+                            <option value="never">Never</option>
+                        </select>
+                        <input asp-for="PollSetting.Deadline" type="datetime-local" class="poll-settings-input" id="settings-deadline" min="@DateTime.Now">
+                        <input asp-for="PollSetting.VoteLimit" type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                    </div>
+                    <div class="form-setting">
+                        <label>Require captcha:</label>
+                        @Html.CheckBoxFor(model => model.PollSetting.HasCaptcha)     
+                        <label for="PollSetting_HasCaptcha" class="custom-checkbox"></label>
+                    </div>
+                    <div class="form-setting">
+                        <label>Hide results:</label>
+                        @Html.CheckBoxFor(model => model.PollSetting.HideResults)
+                        <label for="PollSetting_HideResults" class="custom-checkbox"></label>
+                    </div>
+                </div>
                 <button type="submit" class="button submit-button">Create!</button>
             </div>
         </form>
@@ -36,4 +60,5 @@
 
 @section Scripts {
     <script src="~/js/answer-options.js" asp-append-version="true"></script>
+    <script src="~/js/poll-settings.js" asp-append-version="true"></script>
 }

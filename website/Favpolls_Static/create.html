@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -53,7 +56,31 @@
                                 </div>
                             </div>     
                             <button type="button" class="button side-button icon-button">Add Option <img src="root/images/icons/plus.svg" alt="add-option" width="25px"></button>
-                        </div>                
+                        </div> 
+                        <div class="form-input form-settings-container">
+                            <h3>Poll Settings:</h3>
+                            <div class="form-setting">
+                                <label for="poll-end">End poll after:</label>
+                                <select name="poll-end" id="poll-end" required>
+                                    <option selected disabled hidden>Select...</option>
+                                    <option value="deadline">Deadline date</option>
+                                    <option value="votes">Number of votes</option>
+                                    <option value="never">Never</option>
+                                </select>
+                                <input type="datetime-local" class="poll-settings-input" id="settings-deadline">
+                                <input type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                            </div>
+                            <div class="form-setting">
+                                <label>Require recaptcha:</label>
+                                <input type="checkbox" name="captcha" id="settings-captcha">
+                                <label for="settings-captcha" class="custom-checkbox"></label>
+                            </div>
+                            <div class="form-setting">
+                                <label>Hide results:</label>
+                                <input type="checkbox" name="results" id="settings-results">
+                                <label for="settings-results" class="custom-checkbox"></label>
+                            </div>
+                        </div>               
                         <button type="submit" class="button submit-button">Create!</button>
                     </div>
                 </form>
@@ -63,4 +90,5 @@
 </body>
 <script src="root/js/jquery/jquery.js"></script>
 <script src="root/js/answer-options.js"></script>
+<script src="root/js/poll-settings.js"></script>
 </html>

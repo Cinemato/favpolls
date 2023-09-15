@@ -5,7 +5,7 @@
     font-family: 'Lilita One', cursive;
 }
 
-body {
+body {  
     background-color: #abcc6b;
     /* background-color: #ff9c5e; */
     /* background-color: #F0FFCE; */
@@ -29,29 +29,29 @@ nav {
     padding: 15px 0px;
 }
 
-    nav > ul {
-        list-style: none;
-        display: flex;
-        align-items: center;
-    }
+nav > ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
 
 ul > li {
     margin: 0 15px;
     font-size: 1.1rem;
 }
 
-    ul > li a {
-        color: black;
-        transition: all 0.15s linear;
-        padding: 10px;
-        border-radius: 50px;
-        cursor: pointer;
-    }
+ul > li a {
+    color: black;
+    transition: all 0.15s linear;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
 
-        ul > li a:hover {
-            text-shadow: -1px -1px 0 #FF914D, 1px -1px 0 #FF914D, -1px 1px 0 #FF914D, 1px 1px 0 #FF914D;
-            color: white;
-        }
+ul > li a:hover {
+    text-shadow: -1px -1px 0 #FF914D, 1px -1px 0 #FF914D, -1px 1px 0 #FF914D, 1px 1px 0 #FF914D;
+    color: white;
+}
 
 nav > ul > li > a > img:first-child {
     margin-right: 5px;
@@ -116,9 +116,9 @@ a {
     transition: 0.1s ease;
 }
 
-    .code-input:focus, .code-input:valid {
-        border: 3px solid #FF5757;
-    }
+.code-input:focus, .code-input:valid {
+    border: 3px solid #FF5757;
+}
 
 .button {
     background-color: #FF5757;
@@ -129,10 +129,10 @@ a {
     text-align: center;
 }
 
-    .button:hover {
-        background-color: #d23b3b;
-        text-shadow: none;
-    }
+.button:hover {
+    background-color: #d23b3b;
+    text-shadow: none;
+}
 
 .submit-button {
     margin-top: 25px;
@@ -172,48 +172,53 @@ a {
     margin-bottom: 30px;
 }
 
-    .form-input:last-of-type {
-        margin-bottom: 10px;
-    }
+.form-input:last-of-type {
+    margin-bottom: 10px;
+}
 
-    .form-input > label {
-        font-size: 1.2rem;
-    }
+.form-input > label {
+    font-size: 1.2rem;
+}
 
-    .form-input input[type="text"], .form-input input[type="password"], .form-input input[type="email"] {
-        height: 40px;
-        padding: 5px 15px;
-        outline: none;
-        border-radius: 5px;
-        border: 1px solid black;
-        font-size: 1.1rem;
-        margin-top: 10px;
-        transition: all 0.15s linear;
-    }
+.form-input > h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
 
-        .form-input input[type="text"]:focus, .form-input input[type="password"]:focus, .form-input input[type="email"]:focus {
-            border: 1.5px solid #FF5757;
-        }
+.form-input input[type="text"], .form-input input[type="password"], .form-input input[type="email"]   {
+    height: 40px;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: all 0.15s linear;
+}
+
+.form-input input[type="text"]:focus, .form-input input[type="password"]:focus, .form-input input[type="email"]:focus  {
+    border: 1.5px solid #FF5757;
+}
 
 .form-option {
     position: relative;
     display: flex;
 }
 
-    .form-option > img {
-        position: absolute;
-        right: 10px;
-        top: 15px;
-        background-color: #fff;
-        cursor: pointer;
-        transition: all 0.15s linear;
-    }
+.form-option > img {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
 
-        .form-option > img:hover {
-            width: 34px;
-            right: 8px;
-            top: 13px;
-        }
+.form-option > img:hover {
+    width: 34px;
+    right: 8px;
+    top: 13px;
+}
 
 .remove-option {
     display: none;
@@ -221,6 +226,99 @@ a {
 
 .form-option > input {
     width: 100%;
+}
+
+.form-setting {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-setting > label {
+    margin-right: 7px;
+}
+
+.form-setting > select {
+    padding: 5px;
+    align-self: center;
+    cursor: pointer;
+    border-radius: 3px;
+    padding-bottom: 8px;
+    outline: none;
+    border: 1px solid black;
+}
+
+.poll-settings-input {
+    padding: 6px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-left: 5px;
+    cursor:text;
+    display: none;
+}
+
+#settings-deadline::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0;
+    padding: 100%;
+    padding-right: 5px;
+}
+
+#settings-votes {
+    padding: 7.3px 6px;
+    outline: none;
+}
+
+.form-setting > input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.custom-checkbox::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all 0.5s linear;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox {
+    background-color: #FF5757;
+    border: none;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox:hover {
+    background-color: #d23b3b;
+}
+
+.form-setting > input[type="checkbox"]:checked ~ .custom-checkbox::after {
+    display: block;
+}
+
+.form-setting > select:hover, .custom-checkbox:hover {
+    background-color: rgb(239, 239, 239);
 }
 
 .side-button {
@@ -236,9 +334,9 @@ a {
     justify-content: center;
 }
 
-    .icon-button > img {
-        margin-left: 5px;
-    }
+.icon-button > img {
+    margin-left: 5px;
+}
 
 .auth-button {
     width: 100%;
@@ -250,16 +348,16 @@ a {
     float: left;
 }
 
-    .side-link > a {
-        color: #FF5757;
-        border-bottom: 0px solid #FF5757;
-        padding-bottom: 1px;
-        transition: all 0.15s linear;
-    }
+.side-link > a {
+    color: #FF5757;
+    border-bottom: 0px solid #FF5757;
+    padding-bottom: 1px;
+    transition: all 0.15s linear;
+}
 
-        .side-link > a:hover {
-            border-bottom: 3px solid #FF5757;
-        }
+.side-link > a:hover {
+    border-bottom: 3px solid #FF5757;
+}
 
 .poll-code {
     font-size: 45px;
@@ -271,21 +369,21 @@ a {
     font-size: 20px;
 }
 
-    .poll-info > p:first-child {
-        margin-bottom: 10px;
-    }
+.poll-info > p:first-child {
+    margin-bottom: 10px;
+}
 
 .poll-info {
     margin: 30px 0px;
 }
 
-    .poll-info:first-child {
-        margin-top: 0;
-    }
+.poll-info:first-child {
+    margin-top: 0;
+}
 
-    .poll-info:last-child {
-        margin-bottom: 0;
-    }
+.poll-info:last-child {
+    margin-bottom: 0;
+}
 
 .success-icon {
     margin-bottom: 15px;
@@ -308,17 +406,17 @@ a {
     transition: all 0.15s ease;
 }
 
-    .poll-option:hover {
-        background-color: rgb(209, 228, 228);
-    }
+.poll-option:hover {
+    background-color: rgb(209, 228, 228);
+}
 
 .poll-option-opened {
     margin: 25px 0;
 }
 
-    .poll-option-opened:hover {
-        background-color: azure;
-    }
+.poll-option-opened:hover {
+    background-color: azure;
+}
 
 .poll-option-selected {
     box-shadow: 0.3px 0.3px 0px 4.5px #9DC8EE;
@@ -328,15 +426,15 @@ a {
     transition: all 0.75s ease-out;
 }
 
-    .poll-option > p:last-child {
-        color: white;
-        opacity: 0;
-        position: absolute;
-        left: 10px;
-        top: -20px;
-        font-size: 35px;
-        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    }
+.poll-option > p:last-child {
+    color: white;
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    font-size: 35px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
 
 .poll-side-info {
     display: flex;
@@ -345,9 +443,9 @@ a {
     align-items: flex-start;
 }
 
-    .poll-side-info > p {
-        margin-bottom: 7px;
-    }
+.poll-side-info > p {
+    margin-bottom: 7px;
+}
 
 .poll-container > .submit-button {
     margin-top: 15px;
@@ -369,14 +467,14 @@ a {
     align-items: center;
 }
 
-    .option-progress > span {
-        color: white;
-        font-size: 25px;
-        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-        margin-right: 20px;
-        opacity: 0;
-        transition: all 1.25s ease-in;
-    }
+.option-progress > span {
+    color: white;
+    font-size: 25px;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    margin-right: 20px;
+    opacity: 0;
+    transition: all 1.25s ease-in;
+}
 
 .voted-option {
     font-size: 50px;
@@ -390,10 +488,10 @@ a {
     display: flex;
 }
 
-    .account-poll h1, .account-poll h2, .account-poll h3, .account-poll h4 {
-        font-weight: normal;
-        margin: 5px 0;
-    }
+.account-poll h1, .account-poll h2, .account-poll h3, .account-poll h4 {
+    font-weight: normal;
+    margin: 5px 0;
+}
 
 .account-polls-container {
     width: 75%;
@@ -457,7 +555,7 @@ a {
 
     .code-input {
         width: 90px;
-        padding: 1rem 1rem;
+        padding: 1rem 1rem;   
     }
 }
 
@@ -479,7 +577,7 @@ a {
         width: 90%;
     }
 
-    .poll-option > p:last-child {
+    .poll-option > p:last-child { 
         font-size: 30px;
     }
 
@@ -531,7 +629,7 @@ a {
         font-size: 17px;
     }
 
-    .poll-option > p:last-child {
+    .poll-option > p:last-child { 
         font-size: 25px;
     }
 

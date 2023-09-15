@@ -6,7 +6,7 @@ $(document).ready(() => {
             <img src="/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
         </div>`
 
-        $(".form-options").append(option);
+        $(".form-options-container").append(option);
         $(".remove-option").css("display", "block");
     })
 })

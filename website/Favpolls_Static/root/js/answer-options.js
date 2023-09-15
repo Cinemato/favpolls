@@ -2,11 +2,11 @@ $(document).ready(() => {
     $(".side-button").click(() => {
         let option = `
         <div class="form-option">
-            <input name="PollOptions[${$(".form-option").length}].Option" type="text" placeholder="Option ${$(".form-option").length + 1}">
-            <img src="/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
+            <input name="option${$(".form-option").length + 1}" type="text" placeholder="Option ${$(".form-option").length + 1}">
+            <img src="root/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
         </div>`
 
-        $(".form-options").append(option);
+        $(".form-options-container").append(option);
         $(".remove-option").css("display", "block");
     })
 })

@@ -29,7 +29,10 @@ namespace Favpolls.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(PollVM pollVM) {
             pollVM.PollOptions.ForEach(p => p.Poll = pollVM.Poll);
+            pollVM.PollSetting.Poll = pollVM.Poll;
+
             _unitOfWork.PollOption.AddRange(pollVM.PollOptions);
+            _unitOfWork.PollSetting.Add(pollVM.PollSetting);
 
             var code = GenerateCode(6);
             pollVM.Poll.Code = code;
@@ -48,6 +51,7 @@ namespace Favpolls.Controllers
         {
             Poll poll = _unitOfWork.Poll.Get(p => p.Code == code);
             List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();
+            PollSetting pollSetting = _unitOfWork.PollSetting.Get(s => s.PollId == poll.Id);
 
             var total = 0;
             foreach (var option in pollOptions)
@@ -59,8 +63,19 @@ namespace Favpolls.Controllers
             {
                 Poll = poll,
                 PollOptions = pollOptions,
-                TotalVotes = total
+                TotalVotes = total,
+                PollSetting = pollSetting
             };
+
+            if (pollSetting.VoteLimit <= total || pollSetting.Deadline < DateTime.Now)
+            {
+                pollVM.HasEnded = true;
+            }
+
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                pollVM.CurrentUserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            }
 
             return View(pollVM);
         }

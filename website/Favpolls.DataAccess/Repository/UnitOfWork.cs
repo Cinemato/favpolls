@@ -13,12 +13,14 @@ namespace Favpolls.DataAccess.Repository
         private readonly ApplicationDbContext _context;
         public IPollRepository Poll { get; private set; }
         public IPollOptionRepository PollOption { get; private set; }
+        public IPollSettingRepository PollSetting { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context) 
         {
             _context = context;
             Poll = new PollRepository(context);
             PollOption = new PollOptionRepository(context);
+            PollSetting = new PollSettingRepository(context);
         }
 
         public void Save()

@@ -18,5 +18,11 @@ namespace Favpolls.Models.ViewModels
         public int SelectedOptionId { get; set; } = -1;
 
         public PollOption SelectedOption { get; set; }
+
+        public string CurrentUserId { get; set; } = string.Empty;
+
+        public PollSetting PollSetting { get; set; }
+
+        public bool HasEnded { get; set; } = false;
     }
 }

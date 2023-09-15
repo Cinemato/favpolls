@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PjxHnWMKAn6RWjfFi2LDsActOGn2uaZwLv0sKnHUTUU=",
+  "Hash": "IMCi4vcZI5XrRL5GPdLR+LbaWYxuvQcIJtvkcDRrP3w=",
   "Source": "Favpolls",
   "BasePath": "_content/Favpolls",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\poll-progress.js"
+    },
+    {
+      "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\poll-settings.js",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "js/poll-settings.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\poll-settings.js"
     },
     {
       "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

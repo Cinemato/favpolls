@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\js\\poll-progress.js"
     },
     {
+      "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\poll-settings.js",
+      "PackagePath": "staticwebassets\\js\\poll-settings.js"
+    },
+    {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

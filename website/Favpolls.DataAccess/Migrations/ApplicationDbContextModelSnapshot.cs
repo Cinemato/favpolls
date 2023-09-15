@@ -74,6 +74,37 @@ namespace Favpolls.DataAccess.Migrations
                     b.ToTable("PollOptions");
                 });
 
+            modelBuilder.Entity("Favpolls.Models.PollSetting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime?>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("HasCaptcha")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HideResults")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("PollId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("VoteLimit")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PollId");
+
+                    b.ToTable("PollSetting");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -286,6 +317,17 @@ namespace Favpolls.DataAccess.Migrations
                 });
 
             modelBuilder.Entity("Favpolls.Models.PollOption", b =>
+                {
+                    b.HasOne("Favpolls.Models.Poll", "Poll")
+                        .WithMany()
+                        .HasForeignKey("PollId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Poll");
+                });
+
+            modelBuilder.Entity("Favpolls.Models.PollSetting", b =>
                 {
                     b.HasOne("Favpolls.Models.Poll", "Poll")
                         .WithMany()

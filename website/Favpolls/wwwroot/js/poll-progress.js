@@ -1,18 +1,23 @@
 $(document).ready(() => {
     $(".poll-option").each((index, option) => {
-        $(option).click(() => {
-            $(option).addClass("poll-option-selected");
-            $(".option-id").val($(option).find("input:last").val());
-            $(".poll-option").each((index2, option2) => {
-                if (index != index2)
-                    $(option2).removeClass("poll-option-selected");
+        if (document.getElementsByClassName("submit-button").length === 0) {
+            openOption(option, 0, 0);
+        }
+        else {
+            $(option).click(() => {
+                $(option).addClass("poll-option-selected");
+                $(".option-id").val($(option).find("input:last").val());
+                $(".poll-option").each((index2, option2) => {
+                    if (index != index2)
+                        $(option2).removeClass("poll-option-selected");
 
-                if ($(option2).hasClass("poll-option-selected"))
-                    openOption(option2, 1);
-                else
-                    openOption(option2, 0);   
-            })     
-        })
+                    if ($(option2).hasClass("poll-option-selected"))
+                        openOption(option2, 1, 1);
+                    else
+                        openOption(option2, 0, 1);
+                })
+            })
+        }   
     })
 })
 
@@ -24,9 +29,13 @@ function progressColor(progress) {
     else if (progress >= 90 && progress <= 100) return '#FF5757';
 }
 
-function openOption(option, offset) {
+function openOption(option, selectedVoteOffset, totalVotesOffset) {
+    if ($("#hide-results").val()) {
+        return;
+    }
+
     let prevProgress = parseInt($(option).find("input:first").val());
-    let progress = ((parseInt($(option).find("input:eq(1)").val()) + offset) / (parseInt($(".total-votes").val()) + 1)) * 100;
+    let progress = ((parseInt($(option).find("input:eq(1)").val()) + selectedVoteOffset) / (parseInt($(".total-votes").val()) + totalVotesOffset)) * 100;
 
     if (progress == 100) {
         $(option).find(".option-progress").css("border-radius", "15px");
@@ -47,7 +56,7 @@ function openOption(option, offset) {
     }, {
         duration: 2000,
         step: function (now) {
-            $(this).text(Math.ceil(now) + "%");
+            $(this).text((Math.round(now * 10) / 10) + "%");
         }
     })
 

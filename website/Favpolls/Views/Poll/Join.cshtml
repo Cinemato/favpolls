@@ -5,6 +5,10 @@
         <form method="POST" asp-action="SubmitVote">
             <div class="form-container poll-container">
                 <div class="poll-options-container">
+                    @if(Model.PollSetting.HideResults && Model.Poll.UserId != Model.CurrentUserId)
+                    {
+                        <input type="hidden" name="hide-results" value="@Model.PollSetting.HideResults" id="hide-results">
+                    }
                     <input type="hidden" name="total-votes" value="@Model.TotalVotes" class="total-votes">
                     <input asp-for="SelectedOptionId" type="hidden" class="option-id" />
                     <input asp-for="Poll.Id" type="hidden" value="@Model.Poll.Id" />
@@ -22,8 +26,22 @@
                 </div>
                 <div class="poll-side-info">
                     <p>Poll Code: @Model.Poll.Code</p>
+                    <p>Total Votes: @Model.TotalVotes</p>
+                    @if(Model.HasEnded)
+                    {
+                        <p style="color: red">This poll has ended</p>
+                    }
+                    else if (Model.PollSetting.VoteLimit != null) {
+                        <p style="color: red">Ends after: @(Model.PollSetting.VoteLimit - Model.TotalVotes) votes</p>
+                    }
+                    else if (Model.PollSetting.Deadline != null) {
+                        <p style="color: red">Ends on: @Model.PollSetting.Deadline</p>
+                    }
                 </div>
-                <button type="submit" class="button submit-button">Submit</button>
+                @if (!Model.HasEnded)
+                {
+                    <button type="submit" class="button submit-button">Submit</button>
+                }
             </div>
         </form> 
     </div>
