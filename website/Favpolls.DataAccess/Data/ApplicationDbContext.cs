@@ -19,6 +19,7 @@ namespace Favpolls.DataAccess.Data
 
         public DbSet<Poll> Polls { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
-        public DbSet<PollSetting> PollSetting { get; set; }
+        public DbSet<PollSetting> PollSettings { get; set; }
+        public DbSet<PollVote> PollVotes { get; set; }
     }
 }

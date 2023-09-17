@@ -19,7 +19,7 @@ namespace Favpolls.DataAccess.Repository
 
         public void Update(PollSetting pollSetting)
         {
-            _context.Update(pollSetting);
+            _context.PollSettings.Update(pollSetting);
 
         }
     }

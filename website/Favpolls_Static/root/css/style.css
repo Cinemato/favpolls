@@ -424,6 +424,22 @@ a {
 
 .poll-option-selected {
     box-shadow: 0.3px 0.3px 0px 4.5px #9DC8EE;
+    position: relative;
+}
+
+.poll-option-selected::after {
+    content: "Your Vote";
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    border-radius: 5px;
+    background-color: #ffcd03;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid black;
+    color: white;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    z-index: 100;
 }
 
 .poll-option > p {
@@ -438,6 +454,13 @@ a {
     top: -20px;
     font-size: 35px;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.voted-text {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    margin: 10px 0;
+    font-weight: normal;
+    color: white;
 }
 
 .poll-side-info {

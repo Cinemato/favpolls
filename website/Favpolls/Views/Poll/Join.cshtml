@@ -14,7 +14,7 @@
                     <input asp-for="Poll.Id" type="hidden" value="@Model.Poll.Id" />
                     @foreach (var option in Model.PollOptions)
                     {
-                        <div class="poll-option">
+                        <div class="poll-option @(Model.SelectedOption != null && Model.SelectedOption.Id == option.Id ? "poll-option-selected" : "")">
                             <input type="hidden" name="percentage" value="0">
                             <input type="hidden" name="option-vote-count" value="@option.VoteCount">
                             <input type="hidden" value="@option.Id">
@@ -27,7 +27,7 @@
                 <div class="poll-side-info">
                     <p>Poll Code: @Model.Poll.Code</p>
                     <p>Total Votes: @Model.TotalVotes</p>
-                    @if(Model.HasEnded)
+                    @if (Model.HasEnded)
                     {
                         <p style="color: red">This poll has ended</p>
                     }
@@ -38,9 +38,13 @@
                         <p style="color: red">Ends on: @Model.PollSetting.Deadline</p>
                     }
                 </div>
-                @if (!Model.HasEnded)
+                @if (!Model.HasEnded && Model.SelectedOption == null)
                 {
                     <button type="submit" class="button submit-button">Submit</button>
+                }
+                else if (!Model.HasEnded && Model.SelectedOption != null)
+                {
+                    <h2 class="voted-text">You have already voted!</h2>
                 }
             </div>
         </form> 

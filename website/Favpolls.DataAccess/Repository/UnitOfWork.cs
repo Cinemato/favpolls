@@ -14,6 +14,7 @@ namespace Favpolls.DataAccess.Repository
         public IPollRepository Poll { get; private set; }
         public IPollOptionRepository PollOption { get; private set; }
         public IPollSettingRepository PollSetting { get; private set; }
+        public IPollVoteRepository PollVote { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context) 
         {
@@ -21,6 +22,7 @@ namespace Favpolls.DataAccess.Repository
             Poll = new PollRepository(context);
             PollOption = new PollOptionRepository(context);
             PollSetting = new PollSettingRepository(context);
+            PollVote = new PollVoteRepository(context);
         }
 
         public void Save()

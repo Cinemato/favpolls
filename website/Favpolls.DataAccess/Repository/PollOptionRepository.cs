@@ -19,7 +19,7 @@ namespace Favpolls.DataAccess.Repository
 
         public void Update(PollOption pollOption)
         {
-            _context.Update(pollOption);
+            _context.PollOptions.Update(pollOption);
         }
     }
 }

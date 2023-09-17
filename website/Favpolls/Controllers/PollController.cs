@@ -3,6 +3,9 @@ using Favpolls.Models;
 using Favpolls.DataAccess.Repository.IRepository;
 using Favpolls.Models.ViewModels;
 using System.Security.Claims;
+using System.Net;
+using System.Net.Sockets;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Favpolls.Controllers
 {
@@ -77,6 +80,15 @@ namespace Favpolls.Controllers
                 pollVM.CurrentUserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             }
 
+            string ip = GetUserIP();
+            PollVote pollVote = _unitOfWork.PollVote.Get(v => v.PollId == poll.Id && v.UserIP == ip);
+
+            if (pollVote != null)
+            {
+                PollOption selectedOption = _unitOfWork.PollOption.Get(o => o.Id == pollVote.PollOptionId);
+                pollVM.SelectedOption = selectedOption;
+            }
+
             return View(pollVM);
         }
 
@@ -133,12 +145,23 @@ namespace Favpolls.Controllers
             selectedOption.VoteCount += 1;
             pollVM.SelectedOption = selectedOption;
 
+            string ip = GetUserIP();
+
+            PollVote pollVote = new PollVote
+            {
+                PollId = poll.Id,
+                PollOptionId = selectedOption.Id,
+                UserIP = ip
+            };
+
+            _unitOfWork.PollVote.Add(pollVote);
+
             _unitOfWork.Save();
 
             return View(pollVM);
         }
 
-        public static string GenerateCode(int length)
+        public string GenerateCode(int length)
         {
             var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var stringChars = new char[length];
@@ -149,8 +172,20 @@ namespace Favpolls.Controllers
                 stringChars[i] = chars[random.Next(chars.Length)];
             }
 
-            var code = new String(stringChars);
+            var code = new string(stringChars);
             return code;
+        }
+
+        public string GetUserIP()
+        {
+            string ip = Response.HttpContext.Connection.RemoteIpAddress.ToString();
+            
+            if(ip == "::1")
+            {
+                ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList.Where(ip => ip.AddressFamily == AddressFamily.InterNetwork).FirstOrDefault().ToString();
+            }
+
+            return ip;
         }
     }
 }

@@ -102,7 +102,35 @@ namespace Favpolls.DataAccess.Migrations
 
                     b.HasIndex("PollId");
 
-                    b.ToTable("PollSetting");
+                    b.ToTable("PollSettings");
+                });
+
+            modelBuilder.Entity("Favpolls.Models.PollVote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("PollId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PollOptionId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserIP")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PollId");
+
+                    b.HasIndex("PollOptionId");
+
+                    b.ToTable("PollVotes");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -336,6 +364,23 @@ namespace Favpolls.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Poll");
+                });
+
+            modelBuilder.Entity("Favpolls.Models.PollVote", b =>
+                {
+                    b.HasOne("Favpolls.Models.Poll", "Poll")
+                        .WithMany()
+                        .HasForeignKey("PollId");
+
+                    b.HasOne("Favpolls.Models.PollOption", "PollOption")
+                        .WithMany()
+                        .HasForeignKey("PollOptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Poll");
+
+                    b.Navigation("PollOption");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

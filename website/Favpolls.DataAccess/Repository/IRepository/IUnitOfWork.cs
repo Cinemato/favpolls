@@ -11,6 +11,7 @@ namespace Favpolls.DataAccess.Repository.IRepository
         IPollRepository Poll { get; }
         IPollOptionRepository PollOption { get; }
         IPollSettingRepository PollSetting { get; }
+        IPollVoteRepository PollVote { get; }
 
         void Save();
     }
