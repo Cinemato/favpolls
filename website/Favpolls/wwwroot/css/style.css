@@ -135,10 +135,13 @@ a {
 }
 
 .submit-button {
-    margin-top: 25px;
     padding: 15px 30px;
     border-radius: 30px;
     font-size: 1.5rem;
+}
+
+.form-container .submit-button {
+    margin-top: 25px;
 }
 
 .index-container > h3 {
@@ -235,13 +238,16 @@ a {
     position: relative;
 }
 
+.poll-end-input-container {
+    display: flex;
+}
+
 .form-setting > label {
     margin-right: 7px;
 }
 
-.form-setting > select {
+.form-setting  select {
     padding: 5px;
-    align-self: center;
     cursor: pointer;
     border-radius: 3px;
     padding-bottom: 8px;
@@ -256,6 +262,10 @@ a {
     margin-left: 5px;
     cursor:text;
     display: none;
+}
+
+#settings-deadline {
+    position: relative;
 }
 
 #settings-deadline::-webkit-calendar-picker-indicator {
@@ -317,7 +327,7 @@ a {
     display: block;
 }
 
-.form-setting > select:hover, .custom-checkbox:hover {
+.form-setting select:hover, .custom-checkbox:hover {
     background-color: rgb(239, 239, 239);
 }
 
@@ -420,6 +430,7 @@ a {
 
 .poll-option-selected {
     box-shadow: 0.3px 0.3px 0px 4.5px #9DC8EE;
+    position: relative;
 }
 
 .poll-option-selected::after {
@@ -437,13 +448,6 @@ a {
     z-index: 100;
 }
 
-.voted-text {
-    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    margin: 10px 0;
-    font-weight: normal;
-    color: white;
-}
-
 .poll-option > p {
     transition: all 0.75s ease-out;
 }
@@ -456,6 +460,13 @@ a {
     top: -20px;
     font-size: 35px;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+.voted-text {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    margin: 10px 0;
+    font-weight: normal;
+    color: white;
 }
 
 .poll-side-info {
@@ -554,6 +565,22 @@ a {
     border-radius: 5px;
 }
 
+.noti-error {
+    color: #fff;
+    background-color: #e91717;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px auto 15px auto;
+}
+
+.validation-summary-errors ul {
+    list-style: none;
+    padding-left: 0;
+}
+
 @media screen and (max-width: 1200px) {
     .poll-container {
         width: 90%;
@@ -637,12 +664,39 @@ a {
         margin: 30px 0;
     }
 
+    .subcontainer {
+        margin: 50px 5px;
+    }
+
     .form-container {
         width: 100%;
+        padding: 15px;
     }
 
     .account-polls-container {
         width: 100%;
+    }
+
+    #settings-deadline::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+    .poll-end-input-container {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .poll-end-input-container > select {
+        margin-bottom: 10px;
+    }
+
+    .poll-end-input-container > input {
+        width: 87%;
+    }
+
+    .submit-button {
+        margin-bottom: 10px;
     }
 }
 

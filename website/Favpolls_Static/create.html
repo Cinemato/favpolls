@@ -61,14 +61,16 @@
                             <h3>Poll Settings:</h3>
                             <div class="form-setting">
                                 <label for="poll-end">End poll after:</label>
-                                <select name="poll-end" id="poll-end" required>
-                                    <option selected disabled hidden>Select...</option>
-                                    <option value="deadline">Deadline date</option>
-                                    <option value="votes">Number of votes</option>
-                                    <option value="never">Never</option>
-                                </select>
-                                <input type="datetime-local" class="poll-settings-input" id="settings-deadline">
-                                <input type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                                <div class="poll-end-input-container">      
+                                    <select name="poll-end" id="poll-end" required>
+                                        <option selected disabled hidden>Select...</option>
+                                        <option value="deadline">Deadline date</option>
+                                        <option value="votes">Number of votes</option>
+                                        <option value="never">Never</option>
+                                    </select>
+                                    <input type="datetime-local" class="poll-settings-input" id="settings-deadline">
+                                    <input type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                                </div>          
                             </div>
                             <div class="form-setting">
                                 <label>Require recaptcha:</label>

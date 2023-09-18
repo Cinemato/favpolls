@@ -31,6 +31,7 @@ namespace Favpolls.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(PollVM pollVM) {
+            pollVM.PollOptions = pollVM.PollOptions.FindAll(o => o.Option != null);
             pollVM.PollOptions.ForEach(p => p.Poll = pollVM.Poll);
             pollVM.PollSetting.Poll = pollVM.Poll;
 
@@ -53,6 +54,13 @@ namespace Favpolls.Controllers
         public IActionResult Join(string code)
         {
             Poll poll = _unitOfWork.Poll.Get(p => p.Code == code);
+
+            if (poll == null)
+            {
+                TempData["error"] = "This poll doesn't exist! Try again.";
+                return View("Index");
+            }
+
             List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();
             PollSetting pollSetting = _unitOfWork.PollSetting.Get(s => s.PollId == poll.Id);
 
@@ -137,6 +145,12 @@ namespace Favpolls.Controllers
         {
             Poll poll = _unitOfWork.Poll.Get(p => p.Id == pollVM.Poll.Id);
             pollVM.Poll = poll;
+
+            if (pollVM.SelectedOptionId == -1)
+            {
+                TempData["error"] = "You must select an option!";
+                return RedirectToAction("Join", new { code = poll.Code });
+            }
 
             List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();       
             pollVM.PollOptions = pollOptions;

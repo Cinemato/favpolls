@@ -9,6 +9,7 @@
                     {
                         <input type="hidden" name="hide-results" value="@Model.PollSetting.HideResults" id="hide-results">
                     }
+                    <partial name="_Notifications" />
                     <input type="hidden" name="total-votes" value="@Model.TotalVotes" class="total-votes">
                     <input asp-for="SelectedOptionId" type="hidden" class="option-id" />
                     <input asp-for="Poll.Id" type="hidden" value="@Model.Poll.Id" />
@@ -37,9 +38,13 @@
                     else if (Model.PollSetting.Deadline != null) {
                         <p style="color: red">Ends on: @Model.PollSetting.Deadline</p>
                     }
-                </div>
+                </div>  
                 @if (!Model.HasEnded && Model.SelectedOption == null)
                 {
+                    @if (Model.PollSetting.HasCaptcha)
+                    {
+                        <div class="g-recaptcha" data-sitekey="6LfvTZwkAAAAAFVxUgCdEGkYIM_qpSin-MPQEy8r"></div>
+                    }
                     <button type="submit" class="button submit-button">Submit</button>
                 }
                 else if (!Model.HasEnded && Model.SelectedOption != null)
@@ -53,4 +58,5 @@
 
 @section Scripts {
     <script src="~/js/poll-progress.js" asp-append-version="true"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 }

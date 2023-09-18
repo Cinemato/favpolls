@@ -5,16 +5,15 @@
     <div class="subcontainer">
         <h1 class="title">Login Page</h1>
         <form id="account" method="post">
+            <div asp-validation-summary="ModelOnly" class="noti-error" role="alert"></div>
             <div class="form-container auth-form">
                 <div class="form-input">
                     <label asp-for="Input.Email">Email:</label>
-                    <input asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder="Type your account email here" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    <input asp-for="Input.Email" autocomplete="username" aria-required="true" placeholder="Type your email here" />
                 </div>
                 <div class="form-input">
                     <label asp-for="Input.Password">Password:</label>
-                    <input asp-for="Input.Password" autocomplete="current-password" aria-required="true" placeholder="Type your account password here" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    <input asp-for="Input.Password" autocomplete="current-password" aria-required="true" placeholder="Type your password here" />
                 </div>
                 <p class="side-link">Don't have an account? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register!</a></p>
                 <button type="submit" class="button submit-button auth-button">Login</button>
@@ -22,7 +21,3 @@
         </form>
     </div>
 </div>
-
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
