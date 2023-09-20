@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
             <ul>
                 <li>
                     <a asp-controller="Poll" asp-action="Index">
@@ -27,6 +27,23 @@
                 <partial name="_LoginPartial" />
             </ul>
         </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li>
+                    <a asp-controller="Poll" asp-action="Index">
+                        <img src="~/images/logo/logo-icon.png" alt="favpolls-logo-icon" width="40px">
+                    </a>
+                </li>
+                <li>
+                    <img src="~/images/icons/menu.svg" alt="menu-button" width="40px" id="mobile-menu-button">
+                </li>
+            </ul>
+            <ul class="mobile-nav-links">
+                <li><a asp-controller="Poll" asp-action="Create">Create Poll</a></li>
+                <li><a asp-controller="Poll" asp-action="Index">Join Poll</a></li>
+                <partial name="_LoginPartial" />
+            </ul>
+        </nav>
     </header>
     <div>
         <main role="main">
@@ -34,6 +51,7 @@
         </main>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/mobile-menu.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

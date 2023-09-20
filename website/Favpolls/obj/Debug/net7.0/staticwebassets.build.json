@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IMCi4vcZI5XrRL5GPdLR+LbaWYxuvQcIJtvkcDRrP3w=",
+  "Hash": "G79WKbcSUF6kvDE+9C9oeuJXlN1eRX9fUxq/cJUc7Hc=",
   "Source": "Favpolls",
   "BasePath": "_content/Favpolls",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\images\\icons\\cross.svg"
     },
     {
+      "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\images\\icons\\menu.svg",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "images/icons/menu.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icons\\menu.svg"
+    },
+    {
       "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\images\\icons\\plus.svg",
       "SourceId": "Favpolls",
       "SourceType": "Discovered",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\code-input.js"
+    },
+    {
+      "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\mobile-menu.js",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "js/mobile-menu.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\mobile-menu.js"
     },
     {
       "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\poll-progress.js",

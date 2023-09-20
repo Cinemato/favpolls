@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="desktop-nav">
             <ul>
                 <li>
                     <a href="index.html">
@@ -24,6 +24,24 @@
                 <li><a href="index.html">Join Poll</a></li>
             </ul>
             <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="button">Register</a></li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="root/images/logo/logo-icon.png" alt="favpolls-logo-icon" width="40px">
+                    </a>      
+                </li>
+                <li>
+                    <img src="root/images/icons/menu.svg" alt="menu-button" width="40px" id="mobile-menu-button">
+                </li>
+            </ul>
+            <ul class="mobile-nav-links">
+                <li><a href="create.html">Create Poll</a></li>
+                <li><a href="index.html">Join Poll</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html" class="button">Register</a></li>
             </ul>
@@ -59,4 +77,5 @@
 </body>
 <script src="root/js/jquery/jquery.js"></script>
 <script src="root/js/code-input.js"></script>
+<script src="root/js/mobile-menu.js"></script>
 </html>

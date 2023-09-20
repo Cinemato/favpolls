@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\icons\\cross.svg"
     },
     {
+      "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\images\\icons\\menu.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\menu.svg"
+    },
+    {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\images\\icons\\plus.svg",
       "PackagePath": "staticwebassets\\images\\icons\\plus.svg"
     },
@@ -35,6 +39,10 @@
     {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\code-input.js",
       "PackagePath": "staticwebassets\\js\\code-input.js"
+    },
+    {
+      "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\mobile-menu.js",
+      "PackagePath": "staticwebassets\\js\\mobile-menu.js"
     },
     {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\poll-progress.js",

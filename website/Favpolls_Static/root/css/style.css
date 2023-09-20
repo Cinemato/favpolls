@@ -16,7 +16,8 @@ header {
     background-color: #FFEC9E;
     position: sticky;
     top: 0;
-    border: 0.5px solid black;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
     z-index: 500;
 }
 
@@ -61,13 +62,51 @@ nav > ul > li:first-child > a {
     padding: 0;
 }
 
-nav > ul:last-child > li:last-child > a {
+nav .button {
     padding: 10px 20px;
     border-radius: 30px;
 }
 
 a {
     text-decoration: none;
+}
+
+.mobile-nav {
+    display: none;
+    position: relative;
+}
+
+.mobile-nav > ul:first-child {
+    z-index: 500;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mobile-nav-links {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 35px;
+    border-top: none;
+    background-color: #FFEC9E;
+    border-bottom: 0.5px solid black;
+    max-height: 0px;
+    opacity: 0;
+    transition: all 0.15s linear;
+}
+
+.mobile-nav > ul:last-child > li {
+    margin: 20px 0px;
+}
+
+.mobile-nav > ul:last-child > li:last-child {
+    margin-bottom: 30px;
+}
+
+#mobile-menu-button {
+    cursor: pointer;
 }
 
 .index-container {
@@ -606,6 +645,20 @@ a {
         width: 90px;
         padding: 1rem 1rem;   
     }
+
+    nav {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .desktop-nav > ul > li > a > img:last-child {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -697,6 +750,14 @@ a {
 
     .submit-button {
         margin-bottom: 10px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
     }
 }
 
