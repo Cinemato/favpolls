@@ -2841,6 +2841,10 @@
         }
       },
       "Favpolls.Utility/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Options": "7.0.1",
+          "Newtonsoft.Json": "13.0.1"
+        },
         "runtime": {
           "Favpolls.Utility.dll": {}
         }

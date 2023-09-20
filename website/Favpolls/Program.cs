@@ -4,12 +4,15 @@ using Favpolls.DataAccess.Repository.IRepository;
 using Favpolls.DataAccess.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using Favpolls.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.Configure<GoogleReCaptchaConfig>(builder.Configuration.GetSection("GoogleReCaptcha"));
+builder.Services.AddScoped<IGoogleReCaptcha, GoogleReCaptcha>();
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => {
         options.Password.RequireDigit = false;

@@ -1,4 +1,6 @@
 ﻿@model PollVM
+@using Microsoft.Extensions.Options
+@inject IOptions<GoogleReCaptchaConfig> GoogleReCaptchaConfig
 <div class="index-container">
     <div class="subcontainer">
         <h1 class="title">@Model.Poll.Question</h1>
@@ -43,7 +45,7 @@
                 {
                     @if (Model.PollSetting.HasCaptcha)
                     {
-                        <div class="g-recaptcha" data-sitekey="6LfvTZwkAAAAAFVxUgCdEGkYIM_qpSin-MPQEy8r"></div>
+                        <div class="g-recaptcha" data-sitekey="@GoogleReCaptchaConfig.Value.SiteKey"></div>
                     }
                     <button type="submit" class="button submit-button">Submit</button>
                 }

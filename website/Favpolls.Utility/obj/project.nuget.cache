@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "o+6zjItKUw3unZrcAslotrG3kfiHA2WiBvqPbP1k3sI8eH39+f0ORH4ulGoGNPzPKocSVK7J9rdDA7SPz2+/Sw==",
+  "dgSpecHash": "OiIPg17pvkPcfYLYg1gu1jVS3UlZJQ+Qbu1cb+UU6gKlCt1OLPUt93hl3dDDNeCxO+gqE3xrrUvRWkCgmC8Vsg==",
   "success": true,
   "projectFilePath": "C:\\GitHub Projects\\favpolls\\website\\Favpolls.Utility\\Favpolls.Utility.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\alhar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\alhar\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\alhar\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\alhar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

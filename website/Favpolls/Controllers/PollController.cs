@@ -5,17 +5,23 @@ using Favpolls.Models.ViewModels;
 using System.Security.Claims;
 using System.Net;
 using System.Net.Sockets;
+using Newtonsoft;
 using Microsoft.IdentityModel.Tokens;
+using Favpolls.Utility;
+using NuGet.Protocol;
 
 namespace Favpolls.Controllers
 {
     public class PollController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IGoogleReCaptcha _googleReCaptcha;
+         
 
-        public PollController(IUnitOfWork unitOfWork)
+        public PollController(IUnitOfWork unitOfWork, IGoogleReCaptcha googleReCaptcha)
         {
             _unitOfWork = unitOfWork;
+            _googleReCaptcha = googleReCaptcha;
         }
 
         public IActionResult Index()
@@ -39,6 +45,12 @@ namespace Favpolls.Controllers
             _unitOfWork.PollSetting.Add(pollVM.PollSetting);
 
             var code = GenerateCode(6);
+
+            while (_unitOfWork.Poll.GetAll(p => p.Code == code).Count() > 0) 
+            {
+                code = GenerateCode(6);
+            }
+
             pollVM.Poll.Code = code;
 
             if (User.Identity != null && User.Identity.IsAuthenticated)
@@ -145,6 +157,15 @@ namespace Favpolls.Controllers
         {
             Poll poll = _unitOfWork.Poll.Get(p => p.Id == pollVM.Poll.Id);
             pollVM.Poll = poll;
+
+            var token = Request.Form["g-recaptcha-response"];
+            bool result = _googleReCaptcha.ValidateResponse(token);
+
+            if (token[0].IsNullOrEmpty() || !result)
+            {
+                TempData["error"] = "You must complete the captcha!";
+                return RedirectToAction("Join", new { code = poll.Code });
+            }
 
             if (pollVM.SelectedOptionId == -1)
             {
