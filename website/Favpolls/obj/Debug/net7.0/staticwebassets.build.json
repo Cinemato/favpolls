@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0+sMFcgUivrDZrlD4QKX6f1F7X1t9NKugG/ZAb5Pl3g=",
+  "Hash": "9JkxaP5Ou36TyZEwy8xYAvIlKvWRCfZXhMe7r4eW5lY=",
   "Source": "Favpolls",
   "BasePath": "_content/Favpolls",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\poll-settings.js"
+    },
+    {
+      "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\share-button.js",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "js/share-button.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\share-button.js"
     },
     {
       "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

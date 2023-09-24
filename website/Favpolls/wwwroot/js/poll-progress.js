@@ -42,6 +42,10 @@ function openOption(option, selectedVoteOffset, totalVotesOffset) {
     let prevProgress = parseInt($(option).find("input:first").val());
     let progress = ((parseInt($(option).find("input:eq(1)").val()) + selectedVoteOffset) / (parseInt($(".total-votes").val()) + totalVotesOffset)) * 100;
 
+    if (!progress) {
+        progress = 0;
+    }
+
     if (progress == 100) {
         $(option).find(".option-progress").css("border-radius", "15px");
     }

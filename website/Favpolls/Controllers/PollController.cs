@@ -5,10 +5,8 @@ using Favpolls.Models.ViewModels;
 using System.Security.Claims;
 using System.Net;
 using System.Net.Sockets;
-using Newtonsoft;
 using Microsoft.IdentityModel.Tokens;
 using Favpolls.Utility;
-using NuGet.Protocol;
 
 namespace Favpolls.Controllers
 {
@@ -58,6 +56,8 @@ namespace Favpolls.Controllers
                 pollVM.Poll.UserId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
             }
 
+            pollVM.Poll.CreatedDate = DateTime.Now;
+
             _unitOfWork.Save();
 
             return View("CreateSuccess", pollVM.Poll);
@@ -90,7 +90,7 @@ namespace Favpolls.Controllers
                 PollSetting = pollSetting
             };
 
-            if (pollSetting.VoteLimit <= total || pollSetting.Deadline <= DateTime.Now)
+            if (pollSetting.VoteLimit <= total || pollSetting.Deadline <= DateTime.UtcNow)
             {
                 pollVM.HasEnded = true;
             }
@@ -152,7 +152,9 @@ namespace Favpolls.Controllers
                         }
 
                         pollVMs.Add(pollVM);
-                    }                 
+                    }
+
+                    pollVMs = pollVMs.OrderByDescending(pv => pv.Poll.CreatedDate).ToList();
                 }
                 else
                 {

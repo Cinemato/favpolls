@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\js\\poll-settings.js"
     },
     {
+      "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\share-button.js",
+      "PackagePath": "staticwebassets\\js\\share-button.js"
+    },
+    {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

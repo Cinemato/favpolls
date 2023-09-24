@@ -24,5 +24,8 @@ namespace Favpolls.Models
 
         [ForeignKey("UserId")]    
         public IdentityUser? User { get; set; }
+
+        [Required]
+        public DateTime CreatedDate { get; set; }
     }
 }

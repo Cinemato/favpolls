@@ -668,6 +668,24 @@ a {
     margin-bottom: 30px;
 }
 
+.share-button {
+    position: relative;
+}
+
+.share-button > span {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.15s linear;
+}
+
+.share-button-copied:hover {
+    background-color: #FF5757;
+}
+
 .account-empty {
     color: #fff;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;

@@ -2,7 +2,6 @@
 <div class="index-container">
     <div class="subcontainer">
         <h1 class="title">Poll Creator</h1>
-        <h2 class="subtitle">Complete the form below to create your poll!</h2>
         <form method="POST" asp-action="Create">
             <div class="form-container">
                 <div class="form-input">
@@ -34,7 +33,7 @@
                                 <option value="votes">Number of votes</option>
                                 <option value="never">Never</option>
                             </select>
-                            <input asp-for="PollSetting.Deadline" type="datetime-local" class="poll-settings-input" id="settings-deadline" min="@DateTime.Now">
+                            <input asp-for="PollSetting.Deadline" type="datetime-local" class="poll-settings-input" id="settings-deadline" min="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm")">
                             <input asp-for="PollSetting.VoteLimit" type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
                         </div>
                     </div>
