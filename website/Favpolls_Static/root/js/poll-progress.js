@@ -11,12 +11,19 @@ $(document).ready(() => {
     })
 })
 
-function progressColor(progress) {
+/*function progressColor(progress) {
     if (progress >= 0 && progress <= 24) return '#FFE169';
     else if (progress >= 25 && progress <= 49) return '#FFDE59';
     else if (progress >= 50 && progress <= 74) return '#FF914D';
     else if (progress >= 75 && progress <= 89) return '#FF7A7A';
     else if (progress >= 90 && progress <= 100) return '#FF5757';
+}*/
+
+function progressColor(progress) {
+    const progressP = progress / 100;
+    const hue = 48 * (1 - progressP);
+    const lightness = 71 - 7 * progressP;
+    return `hsl(${hue},100%,${lightness}%)`;
 }
 
 function selectOption(option) {

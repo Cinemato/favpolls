@@ -90,7 +90,7 @@ namespace Favpolls.Controllers
                 PollSetting = pollSetting
             };
 
-            if (pollSetting.VoteLimit <= total || pollSetting.Deadline < DateTime.Now)
+            if (pollSetting.VoteLimit <= total || pollSetting.Deadline <= DateTime.Now)
             {
                 pollVM.HasEnded = true;
             }
@@ -118,31 +118,45 @@ namespace Favpolls.Controllers
             {
                 List<PollVM> pollVMs = new List<PollVM>();
                 List<Poll> polls = _unitOfWork.Poll.GetAll(p => p.UserId == this.User.FindFirstValue(ClaimTypes.NameIdentifier)).ToList();
-                foreach (var poll in polls)
+                if (polls.Count() > 0)
                 {
-                    List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();
-
-                    var total = 0;
-                    PollOption topVote = pollOptions[0];
-
-                    foreach (var option in pollOptions)
+                    foreach (var poll in polls)
                     {
-                        total += option.VoteCount;
-                        if (option.VoteCount > topVote.VoteCount)
+                        List<PollOption> pollOptions = _unitOfWork.PollOption.GetAll(o => o.PollId == poll.Id).ToList();
+                        PollSetting pollSetting = _unitOfWork.PollSetting.Get(s => s.PollId == poll.Id);
+
+                        var total = 0;
+                        PollOption topVote = pollOptions[0];
+
+                        foreach (var option in pollOptions)
                         {
-                            topVote = option;
+                            total += option.VoteCount;
+                            if (option.VoteCount > topVote.VoteCount)
+                            {
+                                topVote = option;
+                            }
                         }
-                    }
 
-                    PollVM pollVM = new PollVM()
-                    {
-                        Poll = poll,
-                        PollOptions = pollOptions,
-                        TotalVotes = total,
-                        SelectedOption = topVote
-                    };
+                        PollVM pollVM = new PollVM()
+                        {
+                            Poll = poll,
+                            PollOptions = pollOptions,
+                            TotalVotes = total,
+                            SelectedOption = topVote,
+                            PollSetting = pollSetting
+                        };
 
-                    pollVMs.Add(pollVM);
+                        if (pollSetting.VoteLimit <= total || pollSetting.Deadline <= DateTime.Now)
+                        {
+                            pollVM.HasEnded = true;
+                        }
+
+                        pollVMs.Add(pollVM);
+                    }                 
+                }
+                else
+                {
+                    TempData["empty"] = "You don't have any polls.";
                 }
 
                 return View(pollVMs);
@@ -158,14 +172,19 @@ namespace Favpolls.Controllers
             Poll poll = _unitOfWork.Poll.Get(p => p.Id == pollVM.Poll.Id);
             pollVM.Poll = poll;
 
-            var token = Request.Form["g-recaptcha-response"];
-            bool result = _googleReCaptcha.ValidateResponse(token);
+            PollSetting pollSetting = _unitOfWork.PollSetting.Get(s => s.PollId == poll.Id);
 
-            if (token[0].IsNullOrEmpty() || !result)
+            if (pollSetting.HasCaptcha)
             {
-                TempData["error"] = "You must complete the captcha!";
-                return RedirectToAction("Join", new { code = poll.Code });
-            }
+                var token = Request.Form["g-recaptcha-response"];
+                bool result = _googleReCaptcha.ValidateResponse(token);
+
+                if (token[0].IsNullOrEmpty() || !result)
+                {
+                    TempData["error"] = "You must complete the captcha!";
+                    return RedirectToAction("Join", new { code = poll.Code });
+                }
+            }     
 
             if (pollVM.SelectedOptionId == -1)
             {

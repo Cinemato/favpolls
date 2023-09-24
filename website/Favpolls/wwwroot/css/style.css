@@ -541,23 +541,22 @@ a {
 
 .option-progress > span {
     color: white;
+    position: absolute;
+    right: 5px;
     font-size: 25px;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-    margin-right: 20px;
     opacity: 0;
     transition: all 1.25s ease-in;
+}
+
+.option-progress > .option-progress-offset {
+    right: -45px;
 }
 
 .voted-option {
     font-size: 50px;
     font-weight: normal;
     margin-top: 15px;
-}
-
-.account-poll {
-    text-align: left;
-    margin-bottom: 25px;
-    display: flex;
 }
 
 .account-poll h1, .account-poll h2, .account-poll h3, .account-poll h4 {
@@ -571,6 +570,9 @@ a {
 }
 
 .account-poll {
+    text-align: left;
+    margin-bottom: 25px;
+    display: flex;
     background-color: #FFEC9E;
     padding: 25px;
     border-radius: 15px;
@@ -579,19 +581,80 @@ a {
     justify-content: space-between;
 }
 
-.account-poll-info > h3 {
+.account-poll-general > h3 {
     margin: 10px 0;
 }
 
-.account-poll-info > .status {
+.account-poll-general > .status {
     padding: 5px 10px;
     color: #fff;
     border-radius: 50px;
     width: fit-content;
 }
 
+.account-poll-settings {
+    margin-top: 15px;
+}
+
+.account-poll-settings > ul {
+    list-style: none;
+    margin-top: 5px;
+    display: none;
+}
+
+.account-poll-settings > .dropdown-active {
+    display: block;
+}
+
+.account-poll-settings > ul > li {
+    margin: 5px 0;
+    font-size: 14.5px;
+}
+
+.account-poll-settings > button {
+    background-color: #FFEC9E;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    color: #FF5757;
+    border-bottom: 0px solid #FF5757;
+    padding-bottom: 1px;
+    transition: all 0.15s linear;
+    cursor: pointer;
+}
+
+.account-poll-settings > .dropdown-button-inactive::after {
+    position: relative;
+    top: -2.5px;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 3px solid #FF5757;
+    border-top: 3px solid #FF5757;
+    transform: rotate(135deg);
+    margin-left: 10px;
+}
+
+.account-poll-settings > .dropdown-button-active::after {
+    position: relative;
+    top: 3px;
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-right: 3px solid #FF5757;
+    border-top: 3px solid #FF5757;
+    transform: rotate(-45deg);
+    margin-left: 10px;
+}
+
 .status-active {
     background-color: #81c004;
+}
+
+.status-inactive {
+    background-color: #e91717;
 }
 
 .account-poll-buttons {
@@ -602,6 +665,13 @@ a {
 
 .account-poll .button {
     border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.account-empty {
+    color: #fff;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    font-weight: normal;
 }
 
 .noti-error {
@@ -693,8 +763,16 @@ a {
         margin-left: 0;
     }
 
+    .account-poll .button {
+        margin: 10px 0;
+    }
+
     .account-polls-container {
         width: 90%;
+    }
+
+    .account-poll-settings {
+        margin-bottom: 15px;
     }
 }
 
@@ -770,7 +848,11 @@ a {
         font-size: 25px;
     }
 
-    .account-poll .submit-button {
+    .account-poll-buttons {
+        justify-content: space-between;
+    }
+
+    .account-poll .button {
         padding: 10px 20px;
     }
 }

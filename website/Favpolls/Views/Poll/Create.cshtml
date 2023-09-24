@@ -4,7 +4,6 @@
         <h1 class="title">Poll Creator</h1>
         <h2 class="subtitle">Complete the form below to create your poll!</h2>
         <form method="POST" asp-action="Create">
-            @*<input asp-for="Poll.Id" type="hidden" />*@
             <div class="form-container">
                 <div class="form-input">
                     <label for="Poll.Question">Question:</label>
@@ -14,14 +13,10 @@
                     <div class="form-input form-options-container">
                         <label>Answer Options:</label>
                         <div class="form-option">
-                            @*<input name="PollOptions[0].Id" type="hidden" />
-                            <input name="PollOptions[0].PollId" type="hidden" />*@
                             <input name="PollOptions[0].Option" type="text" placeholder="Option 1" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>
                         <div class="form-option">
-                            @*<input name="PollOptions[1].Id" type="hidden" />
-                            <input name="PollOptions[1].PollId" type="hidden" />*@
                             <input name="PollOptions[1].Option" type="text" placeholder="Option 2" required>
                             <img src="~/images/icons/cross.svg" alt="remove-option" width="30px" class="remove-option" onclick="removeOption(this)">
                         </div>
@@ -32,14 +27,16 @@
                     <h3>Poll Settings:</h3>
                     <div class="form-setting">
                         <label for="poll-end">End poll after:</label>
-                        <select name="poll-end" id="poll-end" required>
-                            <option selected disabled hidden>Select...</option>
-                            <option value="deadline">Deadline date</option>
-                            <option value="votes">Number of votes</option>
-                            <option value="never">Never</option>
-                        </select>
-                        <input asp-for="PollSetting.Deadline" type="datetime-local" class="poll-settings-input" id="settings-deadline" min="@DateTime.Now">
-                        <input asp-for="PollSetting.VoteLimit" type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                        <div class="poll-end-input-container">
+                            <select name="poll-end" id="poll-end" required>
+                                <option selected disabled hidden>Select...</option>
+                                <option value="deadline">Deadline date</option>
+                                <option value="votes">Number of votes</option>
+                                <option value="never">Never</option>
+                            </select>
+                            <input asp-for="PollSetting.Deadline" type="datetime-local" class="poll-settings-input" id="settings-deadline" min="@DateTime.Now">
+                            <input asp-for="PollSetting.VoteLimit" type="number" class="poll-settings-input" id="settings-votes" placeholder="Votes..." min="1">
+                        </div>
                     </div>
                     <div class="form-setting">
                         <label>Require captcha:</label>

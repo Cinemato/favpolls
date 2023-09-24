@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\images\\logo\\logo-text.svg"
     },
     {
+      "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\account-dropdown.js",
+      "PackagePath": "staticwebassets\\js\\account-dropdown.js"
+    },
+    {
       "Id": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\answer-options.js",
       "PackagePath": "staticwebassets\\js\\answer-options.js"
     },

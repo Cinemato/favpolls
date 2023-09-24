@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G79WKbcSUF6kvDE+9C9oeuJXlN1eRX9fUxq/cJUc7Hc=",
+  "Hash": "0+sMFcgUivrDZrlD4QKX6f1F7X1t9NKugG/ZAb5Pl3g=",
   "Source": "Favpolls",
   "BasePath": "_content/Favpolls",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo\\logo-text.svg"
+    },
+    {
+      "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\account-dropdown.js",
+      "SourceId": "Favpolls",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\",
+      "BasePath": "_content/Favpolls",
+      "RelativePath": "js/account-dropdown.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\account-dropdown.js"
     },
     {
       "Identity": "C:\\GitHub Projects\\favpolls\\website\\Favpolls\\wwwroot\\js\\answer-options.js",
