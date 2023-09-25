@@ -8,11 +8,16 @@
                 <p>Poll Code:</p>
                 <h3 class="poll-code">@Model.Code</h3>
             </div>
-            <h3 style="font-size: 35px; font-weight: normal;">OR</h3>
             <div class="poll-info">
                 <p>Poll Link:</p>
                 <p>https://localhost:7124/Poll/Join?code=@Model.Code</p>
+                <button class="button submit-button share-button">Share<span>Copied!</span></button>
+                <input type="hidden" name="code" value="@Model.Code">
             </div>
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/share-button.js" asp-append-version="true"></script>
+}
