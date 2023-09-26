@@ -16,9 +16,14 @@ header {
     background-color: #FFEC9E;
     position: sticky;
     top: 0;
-    border-top: 0.5px solid black;
-    border-bottom: 0.5px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     z-index: 500;
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
 }
 
 nav {
@@ -91,10 +96,11 @@ a {
     top: 35px;
     border-top: none;
     background-color: #FFEC9E;
-    border-bottom: 0.5px solid black;
+    border-bottom: 1px solid black;
     max-height: 0px;
     opacity: 0;
     transition: all 0.15s linear;
+    overflow: hidden;
 }
 
 .mobile-nav > ul:last-child > li {

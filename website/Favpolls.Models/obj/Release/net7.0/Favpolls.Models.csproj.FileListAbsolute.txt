@@ -1,0 +1,12 @@
+C:\GitHub Projects\favpolls\website\Favpolls.Models\bin\Release\net7.0\Favpolls.Models.deps.json
+C:\GitHub Projects\favpolls\website\Favpolls.Models\bin\Release\net7.0\Favpolls.Models.dll
+C:\GitHub Projects\favpolls\website\Favpolls.Models\bin\Release\net7.0\Favpolls.Models.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.csproj.AssemblyReference.cache
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.AssemblyInfoInputs.cache
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.AssemblyInfo.cs
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.csproj.CoreCompileInputs.cache
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.dll
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\refint\Favpolls.Models.dll
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\Favpolls.Models.pdb
+C:\GitHub Projects\favpolls\website\Favpolls.Models\obj\Release\net7.0\ref\Favpolls.Models.dll

@@ -5,7 +5,9 @@
     <div class="subcontainer">
         <h1 class="title">Register Page</h1>
         <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <div asp-validation-summary="ModelOnly" class="noti-error" role="alert"></div>
+            @if(!ViewData.ModelState.IsValid) {
+                <div asp-validation-summary="All" class="noti-error" role="alert"></div>
+            }   
             <div class="form-container auth-form">
                 <div class="form-input">
                     <label asp-for="Input.Email">Email:</label>
