@@ -11,15 +11,15 @@
             <div class="form-container auth-form">
                 <div class="form-input">
                     <label asp-for="Input.Email">Email:</label>
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Type your email here" />
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Type your email here" required />
                 </div>
                 <div class="form-input">
                     <label asp-for="Input.Password">Password:</label>
-                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Type your password here" />
+                    <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Type your password here" required />
                 </div>
                 <div class="form-input">
                     <label asp-for="Input.ConfirmPassword">Confirm Password:</label>
-                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Repeat your password here" />
+                    <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Repeat your password here" required />
                 </div>
                 <p class="side-link">Already have an account? <a asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Login!</a></p>
                 <button type="submit" class="button submit-button auth-button">Register</button>

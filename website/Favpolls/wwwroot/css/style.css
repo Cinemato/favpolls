@@ -494,12 +494,17 @@ a {
 }
 
 .poll-option > p {
+    overflow-wrap: break-word;
     transition: all 0.75s ease-out;
 }
 
 .poll-option > p:last-child {
     color: white;
     opacity: 0;
+    width: 95%;
+    text-align: left;
+    overflow-wrap: normal;
+    overflow: hidden;
     position: absolute;
     left: 10px;
     top: -20px;
@@ -878,5 +883,9 @@ a {
 
     .account-poll .button {
         padding: 10px 20px;
+    }
+
+    .poll-option > p:last-child {
+        width: 93%;
     }
 }

@@ -33,7 +33,7 @@ function selectOption(option) {
         $(option).find(".option-progress").css("border-radius", "15px");
     }
 
-    $(option).find("p:first").css("opacity", "0");
+    $(option).find("p:first").css({"opacity": "0", "overflow": "hidden", "overflow-wrap": "normal"});
     $(option).find("p:last").css("opacity", "100");
     $(option).find("span").css("opacity", "100");
 
