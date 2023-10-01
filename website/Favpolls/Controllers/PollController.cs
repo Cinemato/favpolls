@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using Microsoft.IdentityModel.Tokens;
 using Favpolls.Utility;
+using Azure.Core;
 
 namespace Favpolls.Controllers
 {
@@ -101,7 +102,14 @@ namespace Favpolls.Controllers
             }
 
             string ip = GetUserIP();
+            var cookie = Request.Cookies["voted_" + poll.Id];
+
             PollVote pollVote = _unitOfWork.PollVote.Get(v => v.PollId == poll.Id && v.UserIP == ip);
+
+            if (pollVote == null && cookie != null)
+            {
+                pollVote = _unitOfWork.PollVote.Get(v => v.PollId == poll.Id && v.UserIP == cookie);
+            }
 
             if (pollVote != null)
             {
@@ -209,6 +217,13 @@ namespace Favpolls.Controllers
                 PollOptionId = selectedOption.Id,
                 UserIP = ip
             };
+
+            var cookieOptions = new CookieOptions();
+
+            cookieOptions.Expires = DateTime.Now.AddDays(3);
+            cookieOptions.Path = "/";
+
+            Response.Cookies.Append("voted_" + poll.Id, ip, cookieOptions);
 
             _unitOfWork.PollVote.Add(pollVote);
 
