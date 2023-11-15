@@ -47,7 +47,7 @@ function openOption(option, selectedVoteOffset, totalVotesOffset) {
     }
 
     if (progress == 100) {
-        $(option).find(".option-progress").css("border-radius", "15px");
+        $(option).find(".option-progress").css("border-radius", "14px");
     }
     else {
         $(option).find(".option-progress").css({

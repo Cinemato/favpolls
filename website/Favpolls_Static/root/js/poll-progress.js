@@ -30,7 +30,7 @@ function selectOption(option) {
     let progress = $(option).find("input").val();
     
     if (progress == 100) {
-        $(option).find(".option-progress").css("border-radius", "15px");
+        $(option).find(".option-progress").css("border-radius", "14px");
     }
 
     $(option).find("p:first").css({"opacity": "0", "overflow": "hidden", "overflow-wrap": "normal"});
